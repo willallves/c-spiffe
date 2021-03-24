@@ -8,13 +8,11 @@ Feature: Fetch JWT
         Then I check that the "SVID" is returned correctly
 
 
-    @Sprint8 @SVID
-    Scenario: FJ_002 - Check that it is possible to fetch JWT SVID with the server down
+    @Sprint8 @SVID @server-off
+    Scenario: FJ_002 - Check that it is not possible to fetch JWT SVID with the server down
         When The server is turned off
         And  I fetch "JWT" "SVID"
-        Then I check that the "SVID" is returned correctly
-        # Tear Down
-        When The server is turned on
+        Then I check that the "SVID" is not returned
 
 
     @Sprint8 @SVID
@@ -32,15 +30,13 @@ Feature: Fetch JWT
         Then I check that the "Bundle" is returned correctly
 
 
-    @Sprint8 @Bundle
+    @Sprint8 @Bundle @server-off
     Scenario: FJ_005 - Check that it is possible to fetch JWT Bundle with the server down
         When The server is turned off
         And  I fetch "JWT" "Bundle"
         Then I check that the "Bundle" is returned correctly
-        # Tear Down
-        When The server is turned on
 
-
+        
     @Sprint8 @Bundle
     Scenario: FJ_006 - Check that it is not possible to fetch JWT Bundle with the agent down
         When The agent is turned off
