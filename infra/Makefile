@@ -23,6 +23,7 @@ join-token:
 
 clean:
 	docker-compose down
+	rm token
 
 integrations-tests:
 	docker cp tests/run-behave-tests.sh infra_tests_1:/mnt/c-spiffe/integration_test
