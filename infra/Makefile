@@ -15,14 +15,17 @@ create-entries:
 	docker-compose exec spire-server ./create-entries.sh
 
 generate-token:
-	docker-compose exec spire-server spire-server token generate -spiffeID spiffe://example.org/host > ../integration_test/token.txt
+	docker-compose exec spire-server spire-server token generate -spiffeID spiffe://example.org/host > token
+	docker cp token infra_tests_1:/mnt/c-spiffe/integration_test
 
 join-token:
 	docker-compose exec $(SERVICE) spire-agent run -joinToken $(TOKEN) -config /opt/spire/conf/agent/agent.conf
 
 clean:
-	rm ../integration_test/token.txt
 	docker-compose down
 
 integrations-tests:
+	docker cp tests/run-behave-tests.sh infra_tests_1:/mnt/c-spiffe/integration_test
+	docker-compose exec tests chmod +x run-behave-tests.sh
 	docker-compose exec tests ./run-behave-tests.sh
+	
