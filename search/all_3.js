@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['c_2dspiffe_42',['c-spiffe',['../md_README.html',1,'']]],
+  ['c_2dspiffe_42',['c-spiffe',['../index.html',1,'']]],
   ['c_5fclient_5fexample_2ec_43',['c_client_example.c',['../c__client__example_8c.html',1,'']]],
   ['c_5fclient_5fexample_5fbundle_2ec_44',['c_client_example_bundle.c',['../c__client__example__bundle_8c.html',1,'']]],
   ['c_5fclient_5fexample_5fvalidate_2ec_45',['c_client_example_validate.c',['../c__client__example__validate_8c.html',1,'']]],
