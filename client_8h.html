@@ -242,6 +242,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Client is a Workload API client. </p>
 
 </div>
 </div>
@@ -256,7 +257,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>ClientOptions are functions, that will modify the client, with an optional argument. </p>
+<p>workloadapi_ClientOption are functions, that will modify the client, with an optional argument. </p>
 
 </div>
 </div>
@@ -447,6 +448,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_Client_Close closes the client. </p>
 
 </div>
 </div>
@@ -522,6 +524,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_Client_FetchJWTBundles fetches the JWT bundles for JWT-SVID validation, keyed by a SPIFFE ID of the trust domain to which they belong. </p>
 
 </div>
 </div>
@@ -556,6 +559,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_Client_FetchJWTSVID fetches a JWT-SVID. </p>
 
 </div>
 </div>
@@ -612,6 +616,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_Client_FetchX509Context fetches the X.509 context, which contains both X509-SVIDs and X.509 bundles. </p>
 
 </div>
 </div>
@@ -640,6 +645,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_Client_FetchX509SVID fetches the default X509-SVID, i.e. the first in the list returned by the Workload API. </p>
 
 </div>
 </div>
@@ -668,6 +674,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_Client_FetchX509SVIDs fetches all X509-SVIDs. </p>
 
 </div>
 </div>
@@ -907,6 +914,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_Client_ValidateJWTSVID validates the JWT-SVID token. The parsed and validated JWT-SVID is returned. </p>
 
 </div>
 </div>
@@ -935,6 +943,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_Client_WatchJWTBundles watches for changes to the JWT bundles. The watcher receives the updated JWT bundles. </p>
 
 </div>
 </div>
@@ -969,6 +978,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_Client_watchJWTBundles receives JWT bundle updates from the Workload API. </p>
 
 </div>
 </div>
@@ -997,6 +1007,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_Client_WatchX509Context receives X509Context updates from the Workload API. </p>
 
 </div>
 </div>
@@ -1031,6 +1042,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_Client_watchX509Context watches for updates to the X.509 context. The watcher receives the updated X.509 context </p>
 
 </div>
 </div>
@@ -1049,6 +1061,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_NewClient the Workload API and returns a client. </p>
 
 </div>
 </div>

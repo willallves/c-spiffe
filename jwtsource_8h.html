@@ -224,6 +224,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_JWTSource_Close closes the source, dropping the connection to the Workload API. Other source methods will return an error after Close has been called. The underlying Workload API client will also be closed if it is owned by the JWTSource (i.e. not provided via the WithClient option). </p>
 
 </div>
 </div>
@@ -276,6 +277,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_JWTSource_GetJWTBundleForTrustDomain returns the JWT bundle for the given trust domain. It implements the jwtbundle.Source interface. </p>
 
 </div>
 </div>
@@ -310,6 +312,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_JWTSource_GetJWTSVID gettes a JWT-SVID from the source with the given parameters. It implements the jwtsvid.Source interface. </p>
 
 </div>
 </div>
@@ -346,6 +349,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_JWTSource_WaitUntilUpdated waits until the source is updated or the context is done, in which case ctx.Err() is returned. </p>
 
 </div>
 </div>
@@ -374,6 +378,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_NewJWTSource creates a new JWTSource. It blocks until the initial update has been received from the Workload API. </p>
 
 </div>
 </div>

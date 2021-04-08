@@ -168,6 +168,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_NewX509Source creates a new X509Source. It blocks until the initial update has been received from the Workload API. </p>
 
 </div>
 </div>
@@ -232,6 +233,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_X509Source_Close closes the source, dropping the connection to the Workload API. Other source methods will return an error after Close has been called. The underlying Workload API client will also be closed if it is owned by the X509Source (i.e. not provided via the WithClient option). </p>
 
 </div>
 </div>
@@ -284,6 +286,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_X509Source_GetX509BundleForTrustDomain returns the X.509 bundle for the given trust domain. It implements the x509bundle.Source interface. </p>
 
 </div>
 </div>
@@ -312,6 +315,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_X509Source_GetX509SVID returns an X509-SVID from the source. It implements the x509svid.Source interface. </p>
 
 </div>
 </div>
@@ -376,6 +380,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>workloadapi_X509Source_WaitUntilUpdated waits until the source is updated or the context is done, in which case ctx.Err() is returned. </p>
 
 </div>
 </div>
