@@ -69,7 +69,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">check_svid.c File Reference</div>  </div>
 </div><!--header-->
@@ -120,10 +121,71 @@ Functions</h2></td></tr>
 <tr class="separator:a7d82a1b3aabb78c52fe876dd8837a9e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b5350f44ef17949dff1b8c208803e27"><td class="memItemLeft" align="right" valign="top">END_TEST&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a1b5350f44ef17949dff1b8c208803e27">START_TEST</a> (test_jwtsvid_EC)</td></tr>
 <tr class="separator:a1b5350f44ef17949dff1b8c208803e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e25e3d80eb4ebd216be234237d75fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a52e25e3d80eb4ebd216be234237d75fe">ck_assert_ptr_ne</a> (<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a3efb0e1a16208deecbd84c15401f7cf8">f</a>, NULL)</td></tr>
+<tr class="separator:a52e25e3d80eb4ebd216be234237d75fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b1a21ab61464f156b6d750ef8c04d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a31b1a21ab61464f156b6d750ef8c04d7">fclose</a> (<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a3efb0e1a16208deecbd84c15401f7cf8">f</a>)</td></tr>
+<tr class="separator:a31b1a21ab61464f156b6d750ef8c04d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8dbed6fefb90f12b3154983b96f0351"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#aa8dbed6fefb90f12b3154983b96f0351">ck_assert_uint_eq</a> (<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>, <a class="el" href="utils_2src_2util_8h.html#a7e02898e99df1995ce7f4edc41644f59abf350750d0d4fabd8954c0f1e9bbae94">NO_ERROR</a>)</td></tr>
+<tr class="separator:aa8dbed6fefb90f12b3154983b96f0351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a135b6d9569306257818e7e5c2a0d1166"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a135b6d9569306257818e7e5c2a0d1166">ck_assert_ptr_eq</a> (<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;audience, NULL)</td></tr>
+<tr class="separator:a135b6d9569306257818e7e5c2a0d1166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae15a705d116945559cc4028724591cc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#ae15a705d116945559cc4028724591cc0">ck_assert_ptr_ne</a> (<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;claims, NULL)</td></tr>
+<tr class="separator:ae15a705d116945559cc4028724591cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa51d6e8266579afde8b497035fc90b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#afa51d6e8266579afde8b497035fc90b8">ck_assert_uint_eq</a> (<a class="el" href="stb__ds_8h.html#aaaecd3e5206fc2e04de712eb86cc92c5">shlenu</a>(<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;claims), 4)</td></tr>
+<tr class="separator:afa51d6e8266579afde8b497035fc90b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0593f0a7f84e5b633f4b15a8c46f1e97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a0593f0a7f84e5b633f4b15a8c46f1e97">ck_assert_int_ge</a> (<a class="el" href="stb__ds_8h.html#a8c6322a082cdae5c913e294f280cad7e">shgeti</a>(<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;claims, &quot;sub&quot;), 0)</td></tr>
+<tr class="separator:a0593f0a7f84e5b633f4b15a8c46f1e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f8ee9eb063a2042f597c0e7c882831"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a93f8ee9eb063a2042f597c0e7c882831">ck_assert_int_ge</a> (<a class="el" href="stb__ds_8h.html#a8c6322a082cdae5c913e294f280cad7e">shgeti</a>(<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;claims, &quot;name&quot;), 0)</td></tr>
+<tr class="separator:a93f8ee9eb063a2042f597c0e7c882831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fc802621513dd29d27cd02337b9464c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a5fc802621513dd29d27cd02337b9464c">ck_assert_int_ge</a> (<a class="el" href="stb__ds_8h.html#a8c6322a082cdae5c913e294f280cad7e">shgeti</a>(<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;claims, &quot;iat&quot;), 0)</td></tr>
+<tr class="separator:a5fc802621513dd29d27cd02337b9464c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a546ff33836666986cc5d02a15ea2cb56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a546ff33836666986cc5d02a15ea2cb56">ck_assert_int_ge</a> (<a class="el" href="stb__ds_8h.html#a8c6322a082cdae5c913e294f280cad7e">shgeti</a>(<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;claims, &quot;exp&quot;), 0)</td></tr>
+<tr class="separator:a546ff33836666986cc5d02a15ea2cb56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf939563ef418fddf0ff620479207bf1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#adf939563ef418fddf0ff620479207bf1">ck_assert_int_eq</a> (<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;expiry, 1620000000)</td></tr>
+<tr class="separator:adf939563ef418fddf0ff620479207bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49259f9d475dffda4279b8771df6a83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#ae49259f9d475dffda4279b8771df6a83">ck_assert_ptr_ne</a> (<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;id.path, NULL)</td></tr>
+<tr class="separator:ae49259f9d475dffda4279b8771df6a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a2d6b399f6752ad7d68fc50fffeddd7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a7a2d6b399f6752ad7d68fc50fffeddd7">ck_assert_str_eq</a> (<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;id.path, &quot;/workload1&quot;)</td></tr>
+<tr class="separator:a7a2d6b399f6752ad7d68fc50fffeddd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14b32c879a6b646babe1cf36a5ce5c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#ae14b32c879a6b646babe1cf36a5ce5c8">ck_assert_ptr_ne</a> (<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;id.td.name, NULL)</td></tr>
+<tr class="separator:ae14b32c879a6b646babe1cf36a5ce5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a041be965d14a52dc7775dfc286da9e9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a041be965d14a52dc7775dfc286da9e9e">ck_assert_str_eq</a> (<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;id.td.name, &quot;example.com&quot;)</td></tr>
+<tr class="separator:a041be965d14a52dc7775dfc286da9e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5130c4c4fceab4756abf61199cd44b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#ac5130c4c4fceab4756abf61199cd44b9">ck_assert_str_eq</a> (<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#ad217723ce21218b2521e0adad6a9be9e">token</a>, <a class="el" href="jwtsvid_2tests_2check__svid_8c.html#ad217723ce21218b2521e0adad6a9be9e">token</a>)</td></tr>
+<tr class="separator:ac5130c4c4fceab4756abf61199cd44b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac85d98fd494dbdde0875d8ea9bf360b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#ac85d98fd494dbdde0875d8ea9bf360b6">ck_assert_ptr_ne</a> (<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a63598f6716920ccee1202c39a3de908e">marshal</a>, NULL)</td></tr>
+<tr class="separator:ac85d98fd494dbdde0875d8ea9bf360b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae092bfc8c85f39258558bb9c02d90a84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#ae092bfc8c85f39258558bb9c02d90a84">jwtbundle_Source_Free</a> (<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a1da90d8e90cfdab64d635511407aee8e">source</a>)</td></tr>
+<tr class="separator:ae092bfc8c85f39258558bb9c02d90a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce75844c0843c611c4c3d47b6b6a723"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#abce75844c0843c611c4c3d47b6b6a723">EVP_PKEY_free</a> (<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a76a3c5d8ec8f468075eb3e366a35a83c">pkey</a>)</td></tr>
+<tr class="separator:abce75844c0843c611c4c3d47b6b6a723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a937874e338682840443f15cd51092b7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a937874e338682840443f15cd51092b7b">jwtsvid_SVID_Free</a> (<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>)</td></tr>
+<tr class="separator:a937874e338682840443f15cd51092b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ddd69470804e72de730c1dec8a91074"><td class="memItemLeft" align="right" valign="top">END_TEST Suite *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a5ddd69470804e72de730c1dec8a91074">svid_suite</a> (void)</td></tr>
 <tr class="separator:a5ddd69470804e72de730c1dec8a91074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
 <tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a36541f15cce75dc2a2c036475282ef31"><td class="memItemLeft" align="right" valign="top">END_TEST <a class="el" href="structspiffeid__TrustDomain.html">spiffeid_TrustDomain</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a36541f15cce75dc2a2c036475282ef31">td</a> = { &quot;example.com&quot; }</td></tr>
+<tr class="separator:a36541f15cce75dc2a2c036475282ef31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b4474262ee1fdc03b4968f1f25c6f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structjwtbundle__Bundle.html">jwtbundle_Bundle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a92b4474262ee1fdc03b4968f1f25c6f8">bundle</a> = <a class="el" href="jwtbundle_2src_2bundle_8h.html#a4aa93bdb7728c81621bccc5efe81acb8">jwtbundle_New</a>(<a class="el" href="check__x509source_8c.html#af961692354eb34b5aacc2fedfbdb664c">td</a>)</td></tr>
+<tr class="separator:a92b4474262ee1fdc03b4968f1f25c6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3efb0e1a16208deecbd84c15401f7cf8"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a3efb0e1a16208deecbd84c15401f7cf8">f</a> = fopen(&quot;./resources/ec-secp256k1-priv-key.pem&quot;, &quot;r&quot;)</td></tr>
+<tr class="separator:a3efb0e1a16208deecbd84c15401f7cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a3c5d8ec8f468075eb3e366a35a83c"><td class="memItemLeft" align="right" valign="top">EVP_PKEY *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a76a3c5d8ec8f468075eb3e366a35a83c">pkey</a> = PEM_read_PrivateKey(<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a3efb0e1a16208deecbd84c15401f7cf8">f</a>, NULL, NULL, NULL)</td></tr>
+<tr class="separator:a76a3c5d8ec8f468075eb3e366a35a83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2cb6376062ef4d6f16d129f52ea9e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="utils_2src_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a></td></tr>
+<tr class="separator:aac2cb6376062ef4d6f16d129f52ea9e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad217723ce21218b2521e0adad6a9be9e"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#ad217723ce21218b2521e0adad6a9be9e">token</a> [] = &quot;eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmM2M1Yzk2LTM5MmUtNDZlZi1hODM5LTZmZjE2MDI3YWY3OCJ9.eyJzdWIiOiJzcGlmZmU6Ly9leGFtcGxlLmNvbS93b3JrbG9hZDEiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE1MTYyMzkwMjIsImV4cCI6MTYyMDAwMDAwMH0.WA7x2GiNZvh5BoLkvS7BBGIHz6ULTCsX7DBJo8kDoPla4wbo4G2157WWCZLx6zPE8Qpvvb11kMk0Ivk_G0gMeA&quot;</td></tr>
+<tr class="separator:ad217723ce21218b2521e0adad6a9be9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da90d8e90cfdab64d635511407aee8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structjwtbundle__Source.html">jwtbundle_Source</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a1da90d8e90cfdab64d635511407aee8e">source</a> = <a class="el" href="bundle_2jwtbundle_2src_2source_8h.html#a67cf308f694ec16065b5f401fc1cfb87">jwtbundle_SourceFromBundle</a>(<a class="el" href="check__x509source_8c.html#aa45c85b913b301570dfbec1bf1a0a4b5">bundle</a>)</td></tr>
+<tr class="separator:a1da90d8e90cfdab64d635511407aee8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dc8f87a6d2bcbcb06f9f58b42155676"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structjwtsvid__SVID.html">jwtsvid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a> = <a class="el" href="jwtsvid_2src_2svid_8h.html#a1d1a95ddec38f539503f78de977fc5de">jwtsvid_ParseAndValidate</a>(<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#ad217723ce21218b2521e0adad6a9be9e">token</a>, <a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a1da90d8e90cfdab64d635511407aee8e">source</a>, NULL, &amp;<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="separator:a7dc8f87a6d2bcbcb06f9f58b42155676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63598f6716920ccee1202c39a3de908e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a63598f6716920ccee1202c39a3de908e">marshal</a> = <a class="el" href="jwtsvid_2src_2svid_8h.html#a6d9077099776aa81bad26946f5bb7b5a">jwtsvid_SVID_Marshal</a>(<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>)</td></tr>
+<tr class="separator:a63598f6716920ccee1202c39a3de908e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a5e433f795e968cb88e8037fa283993d5"></a>
@@ -141,6 +203,526 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="adf939563ef418fddf0ff620479207bf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf939563ef418fddf0ff620479207bf1">&#9670;&nbsp;</a></span>ck_assert_int_eq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_int_eq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;&#160;</td>
+          <td class="paramname"><em>expiry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1620000000&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a546ff33836666986cc5d02a15ea2cb56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546ff33836666986cc5d02a15ea2cb56">&#9670;&nbsp;</a></span>ck_assert_int_ge() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_int_ge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stb__ds_8h.html#a8c6322a082cdae5c913e294f280cad7e">shgeti</a>(<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;claims, &quot;exp&quot;)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fc802621513dd29d27cd02337b9464c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fc802621513dd29d27cd02337b9464c">&#9670;&nbsp;</a></span>ck_assert_int_ge() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_int_ge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stb__ds_8h.html#a8c6322a082cdae5c913e294f280cad7e">shgeti</a>(<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;claims, &quot;iat&quot;)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93f8ee9eb063a2042f597c0e7c882831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f8ee9eb063a2042f597c0e7c882831">&#9670;&nbsp;</a></span>ck_assert_int_ge() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_int_ge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stb__ds_8h.html#a8c6322a082cdae5c913e294f280cad7e">shgeti</a>(<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;claims, &quot;name&quot;)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0593f0a7f84e5b633f4b15a8c46f1e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0593f0a7f84e5b633f4b15a8c46f1e97">&#9670;&nbsp;</a></span>ck_assert_int_ge() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_int_ge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stb__ds_8h.html#a8c6322a082cdae5c913e294f280cad7e">shgeti</a>(<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;claims, &quot;sub&quot;)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">0&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a135b6d9569306257818e7e5c2a0d1166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a135b6d9569306257818e7e5c2a0d1166">&#9670;&nbsp;</a></span>ck_assert_ptr_eq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_ptr_eq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;&#160;</td>
+          <td class="paramname"><em>audience</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NULL&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52e25e3d80eb4ebd216be234237d75fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e25e3d80eb4ebd216be234237d75fe">&#9670;&nbsp;</a></span>ck_assert_ptr_ne() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_ptr_ne </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a3efb0e1a16208deecbd84c15401f7cf8">f</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NULL&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac85d98fd494dbdde0875d8ea9bf360b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac85d98fd494dbdde0875d8ea9bf360b6">&#9670;&nbsp;</a></span>ck_assert_ptr_ne() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_ptr_ne </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a63598f6716920ccee1202c39a3de908e">marshal</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NULL&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae15a705d116945559cc4028724591cc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae15a705d116945559cc4028724591cc0">&#9670;&nbsp;</a></span>ck_assert_ptr_ne() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_ptr_ne </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;&#160;</td>
+          <td class="paramname"><em>claims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NULL&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae49259f9d475dffda4279b8771df6a83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae49259f9d475dffda4279b8771df6a83">&#9670;&nbsp;</a></span>ck_assert_ptr_ne() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_ptr_ne </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;id.&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NULL&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae14b32c879a6b646babe1cf36a5ce5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae14b32c879a6b646babe1cf36a5ce5c8">&#9670;&nbsp;</a></span>ck_assert_ptr_ne() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_ptr_ne </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;id.td.&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NULL&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a2d6b399f6752ad7d68fc50fffeddd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2d6b399f6752ad7d68fc50fffeddd7">&#9670;&nbsp;</a></span>ck_assert_str_eq() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_str_eq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;id.&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;/workload1&quot;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a041be965d14a52dc7775dfc286da9e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a041be965d14a52dc7775dfc286da9e9e">&#9670;&nbsp;</a></span>ck_assert_str_eq() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_str_eq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;id.td.&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;example.com&quot;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5130c4c4fceab4756abf61199cd44b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5130c4c4fceab4756abf61199cd44b9">&#9670;&nbsp;</a></span>ck_assert_str_eq() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_str_eq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#ad217723ce21218b2521e0adad6a9be9e">token</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8dbed6fefb90f12b3154983b96f0351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8dbed6fefb90f12b3154983b96f0351">&#9670;&nbsp;</a></span>ck_assert_uint_eq() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_uint_eq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="utils_2src_2util_8h.html#a7e02898e99df1995ce7f4edc41644f59abf350750d0d4fabd8954c0f1e9bbae94">NO_ERROR</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa51d6e8266579afde8b497035fc90b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa51d6e8266579afde8b497035fc90b8">&#9670;&nbsp;</a></span>ck_assert_uint_eq() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ck_assert_uint_eq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stb__ds_8h.html#aaaecd3e5206fc2e04de712eb86cc92c5">shlenu</a>(<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>-&gt;claims)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">4&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abce75844c0843c611c4c3d47b6b6a723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abce75844c0843c611c4c3d47b6b6a723">&#9670;&nbsp;</a></span>EVP_PKEY_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">EVP_PKEY_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a76a3c5d8ec8f468075eb3e366a35a83c">pkey</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31b1a21ab61464f156b6d750ef8c04d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b1a21ab61464f156b6d750ef8c04d7">&#9670;&nbsp;</a></span>fclose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fclose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a3efb0e1a16208deecbd84c15401f7cf8">f</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae092bfc8c85f39258558bb9c02d90a84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae092bfc8c85f39258558bb9c02d90a84">&#9670;&nbsp;</a></span>jwtbundle_Source_Free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">jwtbundle_Source_Free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a1da90d8e90cfdab64d635511407aee8e">source</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a937874e338682840443f15cd51092b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a937874e338682840443f15cd51092b7b">&#9670;&nbsp;</a></span>jwtsvid_SVID_Free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">jwtsvid_SVID_Free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a840291bc02cba5474a4cb46a9b9566fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -243,6 +825,138 @@ Functions</h2></td></tr>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a92b4474262ee1fdc03b4968f1f25c6f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92b4474262ee1fdc03b4968f1f25c6f8">&#9670;&nbsp;</a></span>bundle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structjwtbundle__Bundle.html">jwtbundle_Bundle</a> * bundle = <a class="el" href="jwtbundle_2src_2bundle_8h.html#a4aa93bdb7728c81621bccc5efe81acb8">jwtbundle_New</a>(<a class="el" href="check__x509source_8c.html#af961692354eb34b5aacc2fedfbdb664c">td</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac2cb6376062ef4d6f16d129f52ea9e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac2cb6376062ef4d6f16d129f52ea9e4">&#9670;&nbsp;</a></span>err</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="utils_2src_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> err</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="jwtbundle_2src_2bundle_8c.html#a2c89d946cb7fc032b88f34d3dfd97050">jwtbundle_Bundle_AddJWTAuthority</a>(</div>
+<div class="line">        <a class="code" href="jwtsvid_2tests_2check__svid_8c.html#a92b4474262ee1fdc03b4968f1f25c6f8">bundle</a>, <span class="stringliteral">&quot;ff3c5c96-392e-46ef-a839-6ff16027af78&quot;</span>, <a class="code" href="jwtsvid_2tests_2check__svid_8c.html#a76a3c5d8ec8f468075eb3e366a35a83c">pkey</a>)</div>
+<div class="ttc" id="ajwtbundle_2src_2bundle_8c_html_a2c89d946cb7fc032b88f34d3dfd97050"><div class="ttname"><a href="jwtbundle_2src_2bundle_8c.html#a2c89d946cb7fc032b88f34d3dfd97050">jwtbundle_Bundle_AddJWTAuthority</a></div><div class="ttdeci">err_t jwtbundle_Bundle_AddJWTAuthority(jwtbundle_Bundle *b, const char *keyID, EVP_PKEY *pkey)</div><div class="ttdef"><b>Definition:</b> bundle.c:158</div></div>
+<div class="ttc" id="ajwtsvid_2tests_2check__svid_8c_html_a76a3c5d8ec8f468075eb3e366a35a83c"><div class="ttname"><a href="jwtsvid_2tests_2check__svid_8c.html#a76a3c5d8ec8f468075eb3e366a35a83c">pkey</a></div><div class="ttdeci">EVP_PKEY * pkey</div><div class="ttdef"><b>Definition:</b> check_svid.c:198</div></div>
+<div class="ttc" id="ajwtsvid_2tests_2check__svid_8c_html_a92b4474262ee1fdc03b4968f1f25c6f8"><div class="ttname"><a href="jwtsvid_2tests_2check__svid_8c.html#a92b4474262ee1fdc03b4968f1f25c6f8">bundle</a></div><div class="ttdeci">jwtbundle_Bundle * bundle</div><div class="ttdef"><b>Definition:</b> check_svid.c:194</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3efb0e1a16208deecbd84c15401f7cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3efb0e1a16208deecbd84c15401f7cf8">&#9670;&nbsp;</a></span>f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* f = fopen(&quot;./resources/ec-secp256k1-priv-key.pem&quot;, &quot;r&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63598f6716920ccee1202c39a3de908e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63598f6716920ccee1202c39a3de908e">&#9670;&nbsp;</a></span>marshal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* marshal = <a class="el" href="jwtsvid_2src_2svid_8h.html#a6d9077099776aa81bad26946f5bb7b5a">jwtsvid_SVID_Marshal</a>(<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76a3c5d8ec8f468075eb3e366a35a83c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a3c5d8ec8f468075eb3e366a35a83c">&#9670;&nbsp;</a></span>pkey</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">EVP_PKEY* pkey = PEM_read_PrivateKey(<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a3efb0e1a16208deecbd84c15401f7cf8">f</a>, NULL, NULL, NULL)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1da90d8e90cfdab64d635511407aee8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1da90d8e90cfdab64d635511407aee8e">&#9670;&nbsp;</a></span>source</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structjwtbundle__Source.html">jwtbundle_Source</a>* source = <a class="el" href="bundle_2jwtbundle_2src_2source_8h.html#a67cf308f694ec16065b5f401fc1cfb87">jwtbundle_SourceFromBundle</a>(<a class="el" href="check__x509source_8c.html#aa45c85b913b301570dfbec1bf1a0a4b5">bundle</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dc8f87a6d2bcbcb06f9f58b42155676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dc8f87a6d2bcbcb06f9f58b42155676">&#9670;&nbsp;</a></span>svid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structjwtsvid__SVID.html">jwtsvid_SVID</a>* svid = <a class="el" href="jwtsvid_2src_2svid_8h.html#a1d1a95ddec38f539503f78de977fc5de">jwtsvid_ParseAndValidate</a>(<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#ad217723ce21218b2521e0adad6a9be9e">token</a>, <a class="el" href="jwtsvid_2tests_2check__svid_8c.html#a1da90d8e90cfdab64d635511407aee8e">source</a>, NULL, &amp;<a class="el" href="jwtsvid_2tests_2check__svid_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36541f15cce75dc2a2c036475282ef31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36541f15cce75dc2a2c036475282ef31">&#9670;&nbsp;</a></span>td</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">END_TEST <a class="el" href="structspiffeid__TrustDomain.html">spiffeid_TrustDomain</a> td = { &quot;example.com&quot; }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad217723ce21218b2521e0adad6a9be9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad217723ce21218b2521e0adad6a9be9e">&#9670;&nbsp;</a></span>token</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char token[] = &quot;eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZmM2M1Yzk2LTM5MmUtNDZlZi1hODM5LTZmZjE2MDI3YWY3OCJ9.eyJzdWIiOiJzcGlmZmU6Ly9leGFtcGxlLmNvbS93b3JrbG9hZDEiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE1MTYyMzkwMjIsImV4cCI6MTYyMDAwMDAwMH0.WA7x2GiNZvh5BoLkvS7BBGIHz6ULTCsX7DBJo8kDoPla4wbo4G2157WWCZLx6zPE8Qpvvb11kMk0Ivk_G0gMeA&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
