@@ -1,6 +1,6 @@
 # c-spiffe
 
-C extension for Spiffe platform!
+C extension for Spiffe platform.
 
 [![Build and run tests](https://github.com/HewlettPackard/c-spiffe/actions/workflows/actions.yml/badge.svg)](https://github.com/HewlettPackard/c-spiffe/actions/workflows/actions.yml)
 
