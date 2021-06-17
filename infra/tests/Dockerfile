@@ -1,4 +1,4 @@
-ARG TAG=latest
+ARG TAG=master
 FROM cspiffe/workload:${TAG}
 
 RUN apt-get update \
