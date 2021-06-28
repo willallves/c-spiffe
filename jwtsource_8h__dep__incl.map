@@ -1,6 +1,7 @@
-<map id="workload/src/jwtsource.h" name="workload/src/jwtsource.h">
-<area shape="rect" id="node1" title=" " alt="" coords="191,5,357,32"/>
-<area shape="rect" id="node2" href="$jwtsource_8c.html" title=" " alt="" coords="5,87,172,114"/>
-<area shape="rect" id="node3" href="$jwtsource__example_8c.html" title=" " alt="" coords="196,80,352,121"/>
-<area shape="rect" id="node4" href="$check__jwtsource_8c.html" title=" " alt="" coords="377,80,523,121"/>
+<map id="include/c&#45;spiffe/workload/jwtsource.h" name="include/c&#45;spiffe/workload/jwtsource.h">
+<area shape="rect" id="node1" title=" " alt="" coords="265,5,431,47"/>
+<area shape="rect" id="node2" href="$workload_8h.html" title=" " alt="" coords="5,95,171,136"/>
+<area shape="rect" id="node3" href="$jwtsource_8c.html" title=" " alt="" coords="195,102,339,129"/>
+<area shape="rect" id="node4" href="$jwtsource__example_8c.html" title=" " alt="" coords="363,95,498,136"/>
+<area shape="rect" id="node5" href="$check__jwtsource_8c.html" title=" " alt="" coords="523,95,669,136"/>
 </map>

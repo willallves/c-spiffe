@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C-SPIFFE Library: spiffetls/src/mode.h Source File</title>
+<title>C-SPIFFE Library: include/c-spiffe/spiffetls/mode.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_2026a35d3728ab9e844181af2f3dbff1.html">spiffetls</a></li><li class="navelem"><a class="el" href="dir_13592f3a8f2cc64c1540964816eeb6ba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_627fe8ff3a8667247b3daef3c2772854.html">c-spiffe</a></li><li class="navelem"><a class="el" href="dir_412e2899f279e2bf3f2783fdd2ede5d8.html">spiffetls</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -74,12 +74,12 @@ $(function() {
 <a href="mode_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef INCLUDE_SPIFFETLS_MODE_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define INCLUDE_SPIFFETLS_MODE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bundle_2x509bundle_2src_2source_8h.html">bundle/x509bundle/src/source.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="certpool_8h.html">internal/x509util/src/certpool.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="authorizer_8h.html">spiffetls/tlsconfig/src/authorizer.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="svid_2x509svid_2src_2source_8h.html">svid/x509svid/src/source.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="x509svid_2src_2svid_8h.html">svid/x509svid/src/svid.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="x509source_8h.html">workload/src/x509source.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bundle_2x509bundle_2source_8h.html">c-spiffe/bundle/x509bundle/source.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="certpool_8h.html">c-spiffe/internal/x509util/certpool.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="authorizer_8h.html">c-spiffe/spiffetls/tlsconfig/authorizer.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="svid_2x509svid_2source_8h.html">c-spiffe/svid/x509svid/source.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="x509svid_2svid_8h.html">c-spiffe/svid/x509svid/svid.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="x509source_8h.html">c-spiffe/workload/x509source.h</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
@@ -128,22 +128,22 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="structspiffetls__DialMode.html">spiffetls_DialMode</a> *<a class="code" href="mode_8h.html#a55f18e851aee7254e2cbacb40dbf5bc5">spiffetls_TLSClient</a>(<a class="code" href="structtlsconfig__Authorizer.html">tlsconfig_Authorizer</a> *authorizer);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<a class="code" href="structspiffetls__DialMode.html">spiffetls_DialMode</a> *</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<a class="code" href="mode_8h.html#a0db76ada370b80a6d49528c4fd702379">spiffetls_TLSClientWithSource</a>(<a class="code" href="structtlsconfig__Authorizer.html">tlsconfig_Authorizer</a> *authorizer,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                              <a class="code" href="structworkloadapi__X509Source.html">workloadapi_X509Source</a> *source);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                              <a class="code" href="structworkloadapi__X509Source.html">workloadapi_X509Source</a> *<a class="code" href="check__endpoint_8c.html#a97b40964d47e99b65b312e4afc894c07">source</a>);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<a class="code" href="structspiffetls__DialMode.html">spiffetls_DialMode</a> *</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<a class="code" href="mode_8h.html#a86d556310db47457c6cfdd1b0303cd62">spiffetls_TLSClientWithRawConfig</a>(<a class="code" href="structtlsconfig__Authorizer.html">tlsconfig_Authorizer</a> *authorizer,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                 <a class="code" href="structx509bundle__Source.html">x509bundle_Source</a> *<a class="code" href="check__jwtsource_8c.html#a92b4474262ee1fdc03b4968f1f25c6f8">bundle</a>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                 <a class="code" href="structx509bundle__Source.html">x509bundle_Source</a> *<a class="code" href="check__endpoint_8c.html#a92b4474262ee1fdc03b4968f1f25c6f8">bundle</a>);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<a class="code" href="structspiffetls__DialMode.html">spiffetls_DialMode</a> *<a class="code" href="mode_8h.html#a78273a73ea97d917ffaf9af4ef116f2a">spiffetls_MTLSClient</a>(<a class="code" href="structtlsconfig__Authorizer.html">tlsconfig_Authorizer</a> *authorizer);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<a class="code" href="structspiffetls__DialMode.html">spiffetls_DialMode</a> *</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<a class="code" href="mode_8h.html#a67176d2420e24cafa5038c49a7efa501">spiffetls_MTLSClientWithSource</a>(<a class="code" href="structtlsconfig__Authorizer.html">tlsconfig_Authorizer</a> *authorizer,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                               <a class="code" href="structworkloadapi__X509Source.html">workloadapi_X509Source</a> *source);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                               <a class="code" href="structworkloadapi__X509Source.html">workloadapi_X509Source</a> *<a class="code" href="check__endpoint_8c.html#a97b40964d47e99b65b312e4afc894c07">source</a>);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<a class="code" href="structspiffetls__DialMode.html">spiffetls_DialMode</a> *</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<a class="code" href="mode_8h.html#afae5572d30c8dc5f6307e3c603730fc6">spiffetls_MTLSClientWithRawConfig</a>(<a class="code" href="structtlsconfig__Authorizer.html">tlsconfig_Authorizer</a> *authorizer,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                  <a class="code" href="structx509bundle__Source.html">x509bundle_Source</a> *<a class="code" href="check__jwtsource_8c.html#a92b4474262ee1fdc03b4968f1f25c6f8">bundle</a>,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                  <a class="code" href="structx509bundle__Source.html">x509bundle_Source</a> *<a class="code" href="check__endpoint_8c.html#a92b4474262ee1fdc03b4968f1f25c6f8">bundle</a>,</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                  <a class="code" href="structx509svid__Source.html">x509svid_Source</a> *<a class="code" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<a class="code" href="structspiffetls__DialMode.html">spiffetls_DialMode</a> *<a class="code" href="mode_8h.html#a9ec1b82dbc0e840571d68d74a16628f3">spiffetls_MTLSWebClient</a>(<a class="code" href="structx509util__CertPool.html">x509util_CertPool</a> *roots);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<a class="code" href="structspiffetls__DialMode.html">spiffetls_DialMode</a> *</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<a class="code" href="mode_8h.html#ac333b53417361101a39013cf97cb3079">spiffetls_MTLSWebClientWithSource</a>(<a class="code" href="structx509util__CertPool.html">x509util_CertPool</a> *roots,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                  <a class="code" href="structworkloadapi__X509Source.html">workloadapi_X509Source</a> *source);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                  <a class="code" href="structworkloadapi__X509Source.html">workloadapi_X509Source</a> *<a class="code" href="check__endpoint_8c.html#a97b40964d47e99b65b312e4afc894c07">source</a>);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<a class="code" href="structspiffetls__DialMode.html">spiffetls_DialMode</a> *</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<a class="code" href="mode_8h.html#a35858e8de9730d8992d40d26203d97c1">spiffetls_MTLSWebClientWithRawConfig</a>(<a class="code" href="structx509util__CertPool.html">x509util_CertPool</a> *roots,</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                     <a class="code" href="structx509svid__Source.html">x509svid_Source</a> *<a class="code" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>);</div>
@@ -152,16 +152,16 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<a class="code" href="structspiffetls__ListenMode.html">spiffetls_ListenMode</a> *<a class="code" href="mode_8h.html#a9761bf8b50ff2d5f619c39b3d20609d3">spiffetls_TLSServer</a>();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<a class="code" href="structspiffetls__ListenMode.html">spiffetls_ListenMode</a> *</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<a class="code" href="mode_8h.html#ada2529bb9f6d714833ae633fd7bc159d">spiffetls_TLSServerWithSource</a>(<a class="code" href="structworkloadapi__X509Source.html">workloadapi_X509Source</a> *source);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<a class="code" href="mode_8h.html#ada2529bb9f6d714833ae633fd7bc159d">spiffetls_TLSServerWithSource</a>(<a class="code" href="structworkloadapi__X509Source.html">workloadapi_X509Source</a> *<a class="code" href="check__endpoint_8c.html#a97b40964d47e99b65b312e4afc894c07">source</a>);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<a class="code" href="structspiffetls__ListenMode.html">spiffetls_ListenMode</a> *<a class="code" href="mode_8h.html#abf0154f7ed7cdab1d0a510e190b1df30">spiffetls_TLSServerWithRawConfig</a>(<a class="code" href="structx509svid__Source.html">x509svid_Source</a> *<a class="code" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<a class="code" href="structspiffetls__ListenMode.html">spiffetls_ListenMode</a> *<a class="code" href="mode_8h.html#a14a2db7eb501a3281a79ca92eb7d8ef5">spiffetls_MTLSServer</a>(<a class="code" href="structtlsconfig__Authorizer.html">tlsconfig_Authorizer</a> *authorizer);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<a class="code" href="structspiffetls__ListenMode.html">spiffetls_ListenMode</a> *</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<a class="code" href="mode_8h.html#a86c0f52d273172cb817f86a79ef39ad0">spiffetls_MTLSServerWithSource</a>(<a class="code" href="structtlsconfig__Authorizer.html">tlsconfig_Authorizer</a> *authorizer,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                               <a class="code" href="structworkloadapi__X509Source.html">workloadapi_X509Source</a> *source);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                               <a class="code" href="structworkloadapi__X509Source.html">workloadapi_X509Source</a> *<a class="code" href="check__endpoint_8c.html#a97b40964d47e99b65b312e4afc894c07">source</a>);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<a class="code" href="structspiffetls__ListenMode.html">spiffetls_ListenMode</a> *</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<a class="code" href="mode_8h.html#a021c2d019c95ab06fee0ca4f4f965ebf">spiffetls_MTLSServerWithRawConfig</a>(<a class="code" href="structtlsconfig__Authorizer.html">tlsconfig_Authorizer</a> *authorizer,</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                  <a class="code" href="structx509svid__Source.html">x509svid_Source</a> *<a class="code" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                  <a class="code" href="structx509bundle__Source.html">x509bundle_Source</a> *<a class="code" href="check__jwtsource_8c.html#a92b4474262ee1fdc03b4968f1f25c6f8">bundle</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                  <a class="code" href="structx509bundle__Source.html">x509bundle_Source</a> *<a class="code" href="check__endpoint_8c.html#a92b4474262ee1fdc03b4968f1f25c6f8">bundle</a>);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">void</span> <a class="code" href="mode_8h.html#a877136df4bcee19580e6f708bd77cc57">spiffetls_ListenMode_Free</a>(<a class="code" href="structspiffetls__ListenMode.html">spiffetls_ListenMode</a> *mode);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
@@ -171,10 +171,11 @@ $(function() {
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// INCLUDE_SPIFFETLS_MODE_H</span></div>
 <div class="ttc" id="aauthorizer_8h_html"><div class="ttname"><a href="authorizer_8h.html">authorizer.h</a></div></div>
-<div class="ttc" id="abundle_2x509bundle_2src_2source_8h_html"><div class="ttname"><a href="bundle_2x509bundle_2src_2source_8h.html">source.h</a></div></div>
+<div class="ttc" id="abundle_2x509bundle_2source_8h_html"><div class="ttname"><a href="bundle_2x509bundle_2source_8h.html">source.h</a></div></div>
 <div class="ttc" id="acertpool_8h_html"><div class="ttname"><a href="certpool_8h.html">certpool.h</a></div></div>
+<div class="ttc" id="acheck__endpoint_8c_html_a92b4474262ee1fdc03b4968f1f25c6f8"><div class="ttname"><a href="check__endpoint_8c.html#a92b4474262ee1fdc03b4968f1f25c6f8">bundle</a></div><div class="ttdeci">spiffebundle_Bundle * bundle</div><div class="ttdef"><b>Definition:</b> check_endpoint.c:17</div></div>
+<div class="ttc" id="acheck__endpoint_8c_html_a97b40964d47e99b65b312e4afc894c07"><div class="ttname"><a href="check__endpoint_8c.html#a97b40964d47e99b65b312e4afc894c07">source</a></div><div class="ttdeci">spiffebundle_Source * source</div><div class="ttdef"><b>Definition:</b> check_endpoint.c:129</div></div>
 <div class="ttc" id="acheck__jwtsource_8c_html_a7dc8f87a6d2bcbcb06f9f58b42155676"><div class="ttname"><a href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a></div><div class="ttdeci">jwtsvid_SVID * svid</div><div class="ttdef"><b>Definition:</b> check_jwtsource.c:151</div></div>
-<div class="ttc" id="acheck__jwtsource_8c_html_a92b4474262ee1fdc03b4968f1f25c6f8"><div class="ttname"><a href="check__jwtsource_8c.html#a92b4474262ee1fdc03b4968f1f25c6f8">bundle</a></div><div class="ttdeci">jwtbundle_Bundle * bundle</div><div class="ttdef"><b>Definition:</b> check_jwtsource.c:67</div></div>
 <div class="ttc" id="amode_8h_html_a021c2d019c95ab06fee0ca4f4f965ebf"><div class="ttname"><a href="mode_8h.html#a021c2d019c95ab06fee0ca4f4f965ebf">spiffetls_MTLSServerWithRawConfig</a></div><div class="ttdeci">spiffetls_ListenMode * spiffetls_MTLSServerWithRawConfig(tlsconfig_Authorizer *authorizer, x509svid_Source *svid, x509bundle_Source *bundle)</div><div class="ttdef"><b>Definition:</b> mode.c:220</div></div>
 <div class="ttc" id="amode_8h_html_a0865f9bb6b2d685b5229b6e5c63085f5"><div class="ttname"><a href="mode_8h.html#a0865f9bb6b2d685b5229b6e5c63085f5">spiffetls_serverMode</a></div><div class="ttdeci">spiffetls_serverMode</div><div class="ttdef"><b>Definition:</b> mode.h:21</div></div>
 <div class="ttc" id="amode_8h_html_a0865f9bb6b2d685b5229b6e5c63085f5a067d10c0a68e8dcae2d54880b29d4363"><div class="ttname"><a href="mode_8h.html#a0865f9bb6b2d685b5229b6e5c63085f5a067d10c0a68e8dcae2d54880b29d4363">MTLS_WEBSERVER_MODE</a></div><div class="ttdeci">@ MTLS_WEBSERVER_MODE</div><div class="ttdef"><b>Definition:</b> mode.h:24</div></div>
@@ -220,9 +221,9 @@ $(function() {
 <div class="ttc" id="astructx509bundle__Source_html"><div class="ttname"><a href="structx509bundle__Source.html">x509bundle_Source</a></div><div class="ttdef"><b>Definition:</b> source.h:13</div></div>
 <div class="ttc" id="astructx509svid__Source_html"><div class="ttname"><a href="structx509svid__Source.html">x509svid_Source</a></div><div class="ttdef"><b>Definition:</b> source.h:7</div></div>
 <div class="ttc" id="astructx509util__CertPool_html"><div class="ttname"><a href="structx509util__CertPool.html">x509util_CertPool</a></div><div class="ttdef"><b>Definition:</b> certpool.h:18</div></div>
-<div class="ttc" id="asvid_2x509svid_2src_2source_8h_html"><div class="ttname"><a href="svid_2x509svid_2src_2source_8h.html">source.h</a></div></div>
+<div class="ttc" id="asvid_2x509svid_2source_8h_html"><div class="ttname"><a href="svid_2x509svid_2source_8h.html">source.h</a></div></div>
 <div class="ttc" id="ax509source_8h_html"><div class="ttname"><a href="x509source_8h.html">x509source.h</a></div></div>
-<div class="ttc" id="ax509svid_2src_2svid_8h_html"><div class="ttname"><a href="x509svid_2src_2svid_8h.html">svid.h</a></div></div>
+<div class="ttc" id="ax509svid_2svid_8h_html"><div class="ttname"><a href="x509svid_2svid_8h.html">svid.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

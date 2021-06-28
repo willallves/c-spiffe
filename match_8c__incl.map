@@ -1,14 +1,14 @@
-<map id="spiffeid/src/match.c" name="spiffeid/src/match.c">
-<area shape="rect" id="node1" title=" " alt="" coords="267,5,401,32"/>
-<area shape="rect" id="node2" href="$match_8h.html" title=" " alt="" coords="355,80,489,107"/>
-<area shape="rect" id="node12" href="$trustdomain_8h.html" title=" " alt="" coords="164,80,331,107"/>
-<area shape="rect" id="node3" href="$utils_2src_2util_8h.html" title=" " alt="" coords="265,229,363,256"/>
-<area shape="rect" id="node10" href="$id_8h.html" title=" " alt="" coords="363,155,473,181"/>
-<area shape="rect" id="node4" href="$stb__ds_8h.html" title=" " alt="" coords="65,304,187,331"/>
-<area shape="rect" id="node6" title=" " alt="" coords="190,379,254,405"/>
-<area shape="rect" id="node8" title=" " alt="" coords="263,304,365,331"/>
-<area shape="rect" id="node9" title=" " alt="" coords="390,304,465,331"/>
+<map id="spiffeid/match.c" name="spiffeid/match.c">
+<area shape="rect" id="node1" title=" " alt="" coords="284,5,397,32"/>
+<area shape="rect" id="node2" href="$match_8h.html" title=" " alt="" coords="361,80,520,107"/>
+<area shape="rect" id="node12" href="$trustdomain_8h.html" title=" " alt="" coords="147,80,337,107"/>
+<area shape="rect" id="node3" href="$utils_2util_8h.html" title=" " alt="" coords="261,229,383,256"/>
+<area shape="rect" id="node10" href="$id_8h.html" title=" " alt="" coords="366,155,499,181"/>
+<area shape="rect" id="node4" href="$stb__ds_8h.html" title=" " alt="" coords="49,304,195,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="195,379,259,405"/>
+<area shape="rect" id="node8" title=" " alt="" coords="271,304,373,331"/>
+<area shape="rect" id="node9" title=" " alt="" coords="398,304,473,331"/>
 <area shape="rect" id="node5" title=" " alt="" coords="5,379,73,405"/>
 <area shape="rect" id="node7" title=" " alt="" coords="97,379,160,405"/>
-<area shape="rect" id="node11" title=" " alt="" coords="456,229,559,256"/>
+<area shape="rect" id="node11" title=" " alt="" coords="471,229,573,256"/>
 </map>
