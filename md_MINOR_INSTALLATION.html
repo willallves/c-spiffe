@@ -97,7 +97,8 @@ Compile gRPC</h2>
 <li>Build grpc</li>
 </ul>
 <p>Currently, we are using <code>NUM_JOBS=8</code></p>
-<div class="fragment"><div class="line">cmake -DgRPC_INSTALL=ON -DgRPC_SSL_PROVIDER=package ../.</div>
+<div class="fragment"><div class="line">cd grpc/cmake/build</div>
+<div class="line">cmake -DgRPC_INSTALL=ON -DgRPC_SSL_PROVIDER=package ../.</div>
 <div class="line">make -j${NUM_JOBS} &amp;&amp; make install</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md70"></a>
 Compile C-Spiffe library</h2>
@@ -105,8 +106,9 @@ Compile C-Spiffe library</h2>
 <li>Clone C-Spiffe source <div class="fragment"><div class="line">git clone https://github.com/HewlettPackard/c-spiffe.git</div>
 </div><!-- fragment --></li>
 </ul>
-<p>Once you meet all the requirements, building is straightforward with <code>CMake</code></p>
-<div class="fragment"><div class="line">mkdir build &amp;&amp; cd build</div>
+<p>Once you meet all the requirements, building is straightforward with <code>CMake</code> Currently, we are using <code>NUM_JOBS=8</code></p>
+<div class="fragment"><div class="line">cd c-spiffe/</div>
+<div class="line">mkdir build &amp;&amp; cd build</div>
 <div class="line">cmake ..</div>
 <div class="line">make -j${NUM_JOBS}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md71"></a>
