@@ -1,7 +1,5 @@
-FROM spire-agent
+FROM cspiffe/spire-agent
 
-ARG GRPC_VERSION=1.34.0
-ARG NUM_JOBS=8
 ARG C_SPIFFE_DIR=/mnt/c-spiffe
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -9,7 +7,6 @@ ENV DEBIAN_FRONTEND noninteractive
 # Install package dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
         gdb \
-        valgrind \
         cmake \
         libssl-dev \
         liburiparser1 liburiparser-dev \
@@ -22,22 +19,21 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libcjose-dev \
         libgtest-dev \
         libgmock-dev \
-        golang-go
-RUN apt-get clean
+        golang-go \
+        openssh-server\
+        libcurl4-openssl-dev;\
+apt-get clean
 
-# gRPC
-# https://github.com/grpc/grpc/tree/master/src/cpp
-# https://github.com/grpc/grpc/blob/master/BUILDING.md
+ARG BRANCH=test-399-Move-test-case-MT_02-to-FXB_03
+RUN cd /mnt && git clone -b ${BRANCH} https://github.com/arianalima/c-spiffe.git
+RUN cd ${C_SPIFFE_DIR} && git pull
 
-RUN cd /tmp && git clone --recurse-submodules -b v${GRPC_VERSION} https://github.com/grpc/grpc
-RUN mkdir -p /tmp/grpc/cmake/build
-RUN cd /tmp/grpc/cmake/build && cmake -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=ON ../..
-RUN sed -i '7,13d' /tmp/grpc/third_party/benchmark/test/cxx03_test.cc 
-RUN cd /tmp/grpc/cmake/build && make -j${NUM_JOBS} && make install
+RUN mkdir -p ${C_SPIFFE_DIR}/build/
 
-# failed to build : ADD failed: forbidden path outside the build context:
-### ADD ../../infra ${C_SPIFFE_DIR}
+COPY . ${C_SPIFFE_DIR}/
+RUN ls ${C_SPIFFE_DIR}
 
-WORKDIR ${C_SPIFFE_DIR}/build
-COPY build-tests-workload.sh .
-RUN chmod +x build-tests-workload.sh
+RUN chmod +x -R ${C_SPIFFE_DIR}/integration_test
+RUN chmod +x -R ${C_SPIFFE_DIR}/infra
+
+RUN useradd server-workload

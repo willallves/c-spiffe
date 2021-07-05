@@ -1,9 +1,8 @@
-#include "internal/jwtutil/src/util.h"
+#include "c-spiffe/internal/jwtutil/util.h"
 #include <check.h>
 #include <openssl/pem.h>
 
-#define STB_DS_IMPLEMENTATION
-#include "utils/src/stb_ds.h"
+#include "c-spiffe/utils/stb_ds.h"
 
 START_TEST(test_jwtutil_JWTAuthoritiesEqual)
 {
@@ -182,10 +181,77 @@ START_TEST(test_jwtutil_CopyJWTAuthorities)
 
     for(int i = 0; i < ITERS; ++i) {
         BIO_free(bio_mems[i]);
-        EVP_PKEY_free(evp_pubkeys[i]);
+    }
+
+    for(size_t i = 0, size = shlenu(str_evp0); i < size; ++i) {
+        EVP_PKEY_free(str_evp0[i].value);
+        EVP_PKEY_free(str_evp1[i].value);
     }
     shfree(str_evp0);
     shfree(str_evp1);
+}
+END_TEST
+
+START_TEST(test_jwtutil_ParseJWKS)
+{
+    const int ITERS = 5;
+    char *paths[]
+        = { "./resources/jwks_valid_1.json", "./resources/jwks_valid_2.json",
+            "./resources/jwks_missing_kid.json",
+            "./resources/jwks_no_keys.json",
+            "./resources/jwks_multiple_x509.json" };
+
+    err_t errs[] = { NO_ERROR, NO_ERROR, ERROR4, ERROR3, ERROR4 };
+    size_t map_lens[] = { 1, 7, 0, 0, 0 };
+    size_t arr_lens[] = { 1, 1, 0, 0, 0 };
+
+    for(int i = 0; i < ITERS; ++i) {
+        FILE *f = fopen(paths[i], "r");
+        ck_assert_ptr_ne(f, NULL);
+
+        string_t str = FILE_to_string(f);
+        fclose(f);
+
+        err_t err;
+        jwtutil_JWKS jwks = jwtutil_ParseJWKS(str, &err);
+
+        ck_assert_uint_eq(err, errs[i]);
+
+        if(err == NO_ERROR) {
+            ck_assert_uint_eq(shlenu(jwks.jwt_auths), map_lens[i]);
+            ck_assert_uint_eq(arrlenu(jwks.x509_auths), arr_lens[i]);
+        }
+
+        arrfree(str);
+        jwtutil_JWKS_Free(&jwks);
+    }
+}
+END_TEST
+
+START_TEST(test_jwtutil_JWKS_Marshal)
+{
+    FILE *f = fopen("./resources/jwks_valid_2.json", "r");
+
+    ck_assert_ptr_ne(f, NULL);
+
+    string_t str = FILE_to_string(f);
+    fclose(f);
+
+    err_t err;
+    jwtutil_JWKS jwks = jwtutil_ParseJWKS(str, &err);
+    free(jwks.root);
+    jwks.root = NULL;
+
+    ck_assert_uint_eq(err, NO_ERROR);
+
+    arrfree(str);
+    str = jwtutil_JWKS_Marshal(&jwks, &err);
+
+    ck_assert_uint_eq(err, NO_ERROR);
+    ck_assert_ptr_ne(str, NULL);
+
+    jwtutil_JWKS_Free(&jwks);
+    arrfree(str);
 }
 END_TEST
 
@@ -198,6 +264,8 @@ Suite *util_suite(void)
 
     tcase_add_test(tc_core, test_jwtutil_JWTAuthoritiesEqual);
     tcase_add_test(tc_core, test_jwtutil_CopyJWTAuthorities);
+    tcase_add_test(tc_core, test_jwtutil_ParseJWKS);
+    tcase_add_test(tc_core, test_jwtutil_JWKS_Marshal);
 
     return s;
 }

@@ -6,6 +6,8 @@ C extension for Spiffe platform.
 
 [![codecov](https://codecov.io/gh/HewlettPackard/c-spiffe/branch/master/graph/badge.svg)](https://codecov.io/gh/HewlettPackard/c-spiffe)
 
+[![release](https://img.shields.io/badge/release-v1.0.0-yellow.svg)](https://github.com/willallves/c-spiffe/archive/refs/tags/1.0.0.zip)
+
 ## Introduction
 
 [SPIFFE](https://spiffe.io/) stands for Security Identity Framework for Everyone and is a set for securely identifying system in dynamic and heterogeneous environment. Please refer to [SPIFFE Documentation](https://spiffe.io/docs/latest/spiffe-about/overview/) for more information.  
@@ -45,6 +47,7 @@ The project folder structure is described as follows:
 * [LICENSE](LICENSE) Project license.
 * [BUILDING.md](BUILDING.md) Instructions on how to build c-spiffe in your system.
 * [CONTRIBUTING.md](CONTRIBUTING.md) Guidelines for contributing to c-spiffe project.
+* [MINIMAL INSTALLATION](MINOR-INSTALLATION.md) Minimal Installation.
 
 ## Using C-Spiffe
 
@@ -60,7 +63,7 @@ We are planning on delivering package for the most popular Linux distros, but at
 
 ### Basic usage
 
-Refer to [Examples](workload/src/EXAMPLE.md) for more information.
+Refer to [Examples](workload/EXAMPLE.md) for more information.
 
 ## Initial Contributors
 

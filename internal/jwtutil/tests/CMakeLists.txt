@@ -1,17 +1,18 @@
 # Minimum CMake required
 cmake_minimum_required(VERSION 3.13)
 
+file(COPY ../tests/resources/ DESTINATION ${PROJECT_BINARY_DIR}/internal/jwtutil/tests/resources/)
+
 set(SOURCES_CHECK
   check_util.c 
-  ../../cryptoutil/src/keys.c
-  ../src/util.c
-  ../../../utils/src/stb_ds.h
+  ../../cryptoutil/keys.c
+  ../util.c
+  ../../../include/c-spiffe/utils/stb_ds.h
 )
 
 add_executable(check_jwtutil ${SOURCES_CHECK})
 
 target_link_libraries(check_jwtutil internal ${CHECK_LIBRARIES}
-  OpenSSL::SSL
   spiffeid
   uriparser
   bundle

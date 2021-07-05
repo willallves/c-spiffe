@@ -1,8 +1,7 @@
-#include "internal/pemutil/src/pem.h"
+#include "c-spiffe/internal/pemutil/pem.h"
 #include <check.h>
 
-#define STB_DS_IMPLEMENTATION
-#include "utils/src/stb_ds.h"
+#include "c-spiffe/utils/stb_ds.h"
 
 START_TEST(test_pemutil_ParseCertificates)
 {

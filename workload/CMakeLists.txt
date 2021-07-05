@@ -43,7 +43,6 @@ bundle
 )
 
 set(EXT_LIBS
-OpenSSL::SSL
 uriparser
 jansson
 cjose
@@ -51,72 +50,74 @@ subunit
 rt
 m
 pthread
-ssl
 crypto)
 
-set(LIB_SOURCE
-  src/x509source.c
-  src/jwtsource.c
-)
 
 # Install Headers:
 set(HEADERS_SOURCE
-  src/x509source.h
-  src/jwtsource.h
+${PROJECT_SOURCE_DIR}/../include/c-spiffe/workload/x509source.h
+${PROJECT_SOURCE_DIR}/../include/c-spiffe/workload/jwtsource.h
 )
-#   - *.h -> <prefix>/include/${TARGET_NAME}/*.h
+#   - *.h -> <prefix>/include/c-spiffe/${TARGET_NAME}/*.h
 install(
     FILES ${HEADERS_SOURCE}
-    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${TARGET_NAME}/src"
+    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${C_SPIFFE_NAME}/${TARGET_NAME}"
 )
 
 set(LIB_WATCHER
-  src/watcher.c
-  src/jwtwatcher.c
+${PROJECT_SOURCE_DIR}/watcher.c
+${PROJECT_SOURCE_DIR}/jwtwatcher.c
 )
 
 # Install Headers:
 set(HEADERS_WATCHER
-  src/watcher.h
-  src/x509context.h
-  src/jwtcallback.h
-  src/jwtwatcher.h
+${PROJECT_SOURCE_DIR}/../include/c-spiffe/workload/watcher.h
+${PROJECT_SOURCE_DIR}/../include/c-spiffe/workload/x509context.h
+${PROJECT_SOURCE_DIR}/../include/c-spiffe/workload/jwtcallback.h
+${PROJECT_SOURCE_DIR}/../include/c-spiffe/workload/jwtwatcher.h
 )
-#   - *.h -> <prefix>/include/${TARGET_NAME}/*.h
+#   - *.h -> <prefix>/include/c-spiffe/${TARGET_NAME}/*.h
 install(
     FILES ${HEADERS_WATCHER}
-    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${TARGET_NAME}/src"
+    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${C_SPIFFE_NAME}/${TARGET_NAME}"
 )
 
 set(LIB_BACKOFF
-  src/backoff.c
+${PROJECT_SOURCE_DIR}/backoff.c
 )
 
 # Install Headers:
 set(HEADERS_BACKOFF
-  src/backoff.h
+${PROJECT_SOURCE_DIR}/../include/c-spiffe/workload/backoff.h
 )
-#   - *.h -> <prefix>/include/${TARGET_NAME}/*.h
+#   - *.h -> <prefix>/include/c-spiffe/${TARGET_NAME}/*.h
 install(
     FILES ${HEADERS_BACKOFF}
-    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${TARGET_NAME}/src"
+    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${C_SPIFFE_NAME}/${TARGET_NAME}"
 )
 
 set(LIB_CLIENT
-  src/client.cc
-  ${proto_srcs}
-  ${grpc_srcs}
+${PROJECT_SOURCE_DIR}/client.cc
+${PROJECT_SOURCE_DIR}/../svid/jwtsvid/parse.c
+${PROJECT_SOURCE_DIR}/../svid/x509svid/verify.c
+${PROJECT_SOURCE_DIR}/../svid/x509svid/source.c
+${PROJECT_SOURCE_DIR}/../bundle/jwtbundle/source.c
+${PROJECT_SOURCE_DIR}/../bundle/x509bundle/source.c
+${PROJECT_SOURCE_DIR}/jwtsource.c
+${PROJECT_SOURCE_DIR}/x509source.c
+${proto_srcs}
+${grpc_srcs}
 )
 # Install Headers:
 set(HEADERS_CLIENT
-  src/client.h
-  ${proto_hdrs}
-  ${grpc_hdrs}
+${PROJECT_SOURCE_DIR}/../include/c-spiffe/workload/client.h
+${proto_hdrs}
+${grpc_hdrs}
 )
-#   - *.h -> <prefix>/include/${TARGET_NAME}/*.h
+#   - *.h -> <prefix>/include/c-spiffe/${TARGET_NAME}/*.h
 install(
     FILES ${HEADERS_CLIENT}
-    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${TARGET_NAME}/src"
+    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${C_SPIFFE_NAME}/${TARGET_NAME}"
 )
 
 add_library(backoff SHARED ${LIB_BACKOFF})
@@ -137,8 +138,7 @@ ${_GRPC_GRPC}
 ${_PROTOBUF_LIBPROTOBUF}
 )
 
-add_library(source SHARED ${LIB_SOURCE})
-target_link_libraries(source
+target_link_libraries(
 client
 ${OWN_LIBS}
 ${EXT_LIBS}
@@ -146,42 +146,52 @@ ${EXT_LIBS}
 
 # Install lib:
 install(
-    TARGETS              "backoff" "client" "source"
+    TARGETS              "backoff" "client"
     LIBRARY DESTINATION  "${CMAKE_INSTALL_LIBDIR}"
 )
 
 set(CPP_CLIENT
-    src/cpp_client_example.cc
+${PROJECT_SOURCE_DIR}/cpp_client_example.cc
 )
 add_executable(cpp_client "${CPP_CLIENT}")
-target_link_libraries(cpp_client source )
+target_link_libraries(cpp_client client)
 
 set(C_CLIENT
-    src/c_client_example.c
+${PROJECT_SOURCE_DIR}/c_client_example.c
 )
 add_executable(c_client "${C_CLIENT}")
-target_link_libraries(c_client source )
+target_link_libraries(c_client client)
 
 set(C_CLIENT_BUNDLE
-    src/c_client_example_bundle.c
+${PROJECT_SOURCE_DIR}/c_client_example_bundle.c
 )
 add_executable(c_client_bundle "${C_CLIENT_BUNDLE}")
 target_link_libraries(c_client_bundle client)
 
 set(WATCH_JWT_BUNDLES
-    src/watch_jwt_bundles.c
+${PROJECT_SOURCE_DIR}/watch_jwt_bundles.c
 )
 add_executable(example_watch_jwt_bundles "${WATCH_JWT_BUNDLES}")
 target_link_libraries(example_watch_jwt_bundles client)
 
 set(C_CLIENT_VALIDATE
-    src/c_client_example_validate.c
+${PROJECT_SOURCE_DIR}/c_client_example_validate.c
 )
 add_executable(c_client_validate "${C_CLIENT_VALIDATE}")
 target_link_libraries(c_client_validate client)
 
 set(JWTSOURCE_EXAMPLE
-    src/jwtsource_example.c
+${PROJECT_SOURCE_DIR}/jwtsource_example.c
 )
 add_executable(jwtsource_example "${JWTSOURCE_EXAMPLE}")
-target_link_libraries(jwtsource_example source)
+target_link_libraries(jwtsource_example client)
+
+# Install higher level header:
+set(HEADERS_MOD_WORKLOAD
+${PROJECT_SOURCE_DIR}/../include/c-spiffe/workload/workload.h
+)
+#   - *.h -> <prefix>/include/c-spiffe/*.h
+install(
+    FILES ${HEADERS_MOD_WORKLOAD}
+    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${C_SPIFFE_NAME}"
+)

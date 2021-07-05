@@ -2,6 +2,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 set(TARGET_NAME "c-spiffe")
+set(C_SPIFFE_NAME "c-spiffe")
 project(${TARGET_NAME} VERSION 0.0.1)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
@@ -35,14 +36,12 @@ else()
   set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:gRPC::grpc_cpp_plugin>)
 endif()
 
-find_package(OpenSSL REQUIRED)
-
 # Enable Coverage Tests
 set(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS}   -fprofile-arcs -ftest-coverage -g -O0")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage -g -O0")
 
 # Add folders for headers
-include_directories(${PROJECT_SOURCE_DIR})
+include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # Introduce variables:
 #   - CMAKE_INSTALL_LIBDIR
@@ -51,7 +50,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 include(GNUInstallDirs)
 
 # Set modules list
-set(modules bundle internal spiffeid svid workload spiffetls)
+set(modules bundle internal spiffeid svid workload spiffetls federation examples)
 
 # Add projects
 foreach(module ${modules})
@@ -59,7 +58,7 @@ foreach(module ${modules})
 endforeach()
 
 # Enable tests
-option(ENABLE_TESTS "Enable unit testing" ON)
+option(ENABLE_TESTS "Enable unit testing" OFF)
 
 if (ENABLE_TESTS)
     find_package(Check REQUIRED)
@@ -74,11 +73,13 @@ if (ENABLE_TESTS)
     add_subdirectory(${PROJECT_SOURCE_DIR}/internal/x509util/tests)
     add_subdirectory(${PROJECT_SOURCE_DIR}/bundle/x509bundle/tests)
     add_subdirectory(${PROJECT_SOURCE_DIR}/bundle/jwtbundle/tests)
+    add_subdirectory(${PROJECT_SOURCE_DIR}/bundle/spiffebundle/tests)
     add_subdirectory(${PROJECT_SOURCE_DIR}/svid/x509svid/tests)
     add_subdirectory(${PROJECT_SOURCE_DIR}/svid/jwtsvid/tests)
     add_subdirectory(${PROJECT_SOURCE_DIR}/workload/tests)
     add_subdirectory(${PROJECT_SOURCE_DIR}/spiffetls/tests)
     add_subdirectory(${PROJECT_SOURCE_DIR}/spiffetls/tlsconfig/tests)
+    add_subdirectory(${PROJECT_SOURCE_DIR}/federation/tests)
 
     # Add build target to generate Coverage Test Report to all compiled object files
     find_program(GCOV gcov)
@@ -123,7 +124,7 @@ if (ENABLE_TESTS)
       COMMAND find .. -type f -name *pb.cc.gcno -exec rm -r {} "\;"
 
       COMMAND ${LCOV} --directory .. --capture -o lcov.info
-      COMMAND ${LCOV} --remove lcov.info -o lcov.info '/usr/*' '*/build/workload/*' '*/include/*' '*stb_ds*'
+      COMMAND ${LCOV} --remove lcov.info -o lcov.info '/usr/*' '*/build/workload/*' '*/include/*' '*stb_ds*' '*/resources/*'
       COMMAND echo "lcov.info generated."
       COMMAND ${GENHTML} lcov.info --output-directory ${CMAKE_BINARY_DIR}/Coverage/Reports 
       COMMAND echo "Command lcov - Coverage reports generated."

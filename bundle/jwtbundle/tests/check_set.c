@@ -1,7 +1,7 @@
-#include "bundle/jwtbundle/src/set.h"
-#include "internal/cryptoutil/src/keys.h"
-#include "internal/jwtutil/src/util.h"
-#include "spiffeid/src/trustdomain.h"
+#include "c-spiffe/bundle/jwtbundle/set.h"
+#include "c-spiffe/internal/cryptoutil/keys.h"
+#include "c-spiffe/internal/jwtutil/util.h"
+#include "c-spiffe/spiffeid/trustdomain.h"
 #include <check.h>
 #include <openssl/pem.h>
 
@@ -106,6 +106,7 @@ START_TEST(test_jwtbundle_Set_Remove)
     for(int i = 0; i < ITERS; ++i) {
         jwtbundle_Set_Remove(set, td[i]);
         ck_assert_int_lt(shgeti(set->bundles, td[i].name), 0);
+        jwtbundle_Bundle_Free(bundle_ptr[i]);
     }
 
     jwtbundle_Set_Free(set);

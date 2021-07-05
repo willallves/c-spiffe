@@ -3,7 +3,6 @@
 DOCS/
 test.c
 test2.c
-privkey.pem
 test.json
 *.o
 # Visual Studio Code
@@ -37,9 +36,13 @@ internal/x509util/tests/util.o
 # Integration test files
 integration_test/data
 integration_test/**/__pycache__
+integration_test/*.output
+integration_test/*.log
+integration_test/helpers/bash-general-scripts/authorized_keys
 *.token
 
 #files generated from the document generator
 html/
 latex/
 
+TODO

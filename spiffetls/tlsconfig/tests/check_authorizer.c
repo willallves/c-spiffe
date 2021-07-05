@@ -1,5 +1,5 @@
-#include "spiffeid/src/trustdomain.h"
-#include "spiffetls/tlsconfig/src/authorizer.h"
+#include "c-spiffe/spiffeid/trustdomain.h"
+#include "c-spiffe/spiffetls/tlsconfig/authorizer.h"
 #include <check.h>
 
 START_TEST(test_tlsconfig_AuthorizeAny)

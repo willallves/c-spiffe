@@ -1,7 +1,7 @@
-#include "internal/cryptoutil/src/keys.h"
-#include "internal/x509util/src/util.h"
-#include "spiffeid/src/trustdomain.h"
-#include "bundle/x509bundle/src/set.h"
+#include "c-spiffe/internal/cryptoutil/keys.h"
+#include "c-spiffe/internal/x509util/util.h"
+#include "c-spiffe/spiffeid/trustdomain.h"
+#include "c-spiffe/bundle/x509bundle/set.h"
 #include <check.h>
 #include <openssl/pem.h>
 #include <openssl/x509.h>
@@ -90,6 +90,7 @@ START_TEST(test_x509bundle_Set_Remove)
     for(int i = 0; i < ITERS; ++i) {
         x509bundle_Set_Remove(set, td[i]);
         ck_assert_int_lt(shgeti(set->bundles, td[i].name), 0);
+        x509bundle_Bundle_Free(bundle_ptr[i]);
     }
 
     x509bundle_Set_Free(set);
