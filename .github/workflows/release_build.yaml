@@ -19,7 +19,7 @@ jobs:
 
     - name: Create tag
       run: |
-        cd ${{github.workspace}}/another_public_repo
+        cd ${{github.workspace}}
         git tag ${{ steps.get_tag.outputs.tag }}
         git push --tags --porcelain
 
@@ -33,7 +33,4 @@ jobs:
         release_name: Release ${{ steps.get_tag.outputs.tag }}
         draft: false
         prerelease: false
-        owner: foo
-        repo: another_public_repo
-
         
