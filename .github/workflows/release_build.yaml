@@ -18,10 +18,10 @@ jobs:
       id: get_tag
 
     - name: Create tag
-      run: |
-        cd ${{github.workspace}}
-        git tag ${{ steps.get_tag.outputs.tag }}
-        git push --tags --porcelain
+      uses: Klemensas/action-autotag@stable
+      with:
+        GITHUB_TOKEN: "${{ secrets.TOKEN_GB }}"
+        tag_prefix: "v"
 
     - name: Create Release
       id: create_release
@@ -30,7 +30,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.TOKEN_GB }}
       with:
         tag_name: ${{ steps.get_tag.outputs.tag }}
-        release_name: Release 1 ${{ steps.get_tag.outputs.tag }}
+        release_name: Release ${{ steps.get_tag.outputs.tag }}
         draft: false
         prerelease: false
         
