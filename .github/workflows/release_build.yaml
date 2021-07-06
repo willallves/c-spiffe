@@ -8,11 +8,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env: 
+      HAS_TOKEN: ${{ secrets.TOKEN_GB != '' }}
+
     steps:
     - name: Checkout public repository
       uses: actions/checkout@v2
 
     - name: Create tag
+      if: ${{ env.HAS_TOKEN == 'true' }}
       id: tag_version
       uses: mathieudutour/github-tag-action@v5.5
       with:
@@ -20,6 +25,7 @@ jobs:
         tag_prefix: "v"
 
     - name: Create Release
+      if: ${{ env.HAS_TOKEN == 'true' }}
       id: create_release
       uses: actions/create-release@v1
       env:
