@@ -88,12 +88,9 @@ var searchData=
   ['err_5fwaiting_250',['ERR_WAITING',['../utils_2util_8h.html#a7e02898e99df1995ce7f4edc41644f59a06ed24b8af5676e232cee7aad964af76',1,'util.h']]],
   ['err_5fwithout_5furi_251',['ERR_WITHOUT_URI',['../utils_2util_8h.html#a7e02898e99df1995ce7f4edc41644f59a45bc53e1b55912c60a31696e854ca013',1,'util.h']]],
   ['error_252',['error',['../check__jwtwatcher_8c.html#a4cd19e5417bdc666b015404bdfea1379',1,'error():&#160;check_jwtwatcher.c'],['../workload_2tests_2check__watcher_8c.html#af10dacfa214e2575bb2e0ee407c242e0',1,'error():&#160;check_watcher.c']]],
-  ['error4_253',['ERROR4',['../utils_2util_8h.html#a7e02898e99df1995ce7f4edc41644f59a99e90a6ae10211be41c9c505e40653f7',1,'util.h']]],
-  ['error5_254',['ERROR5',['../utils_2util_8h.html#a7e02898e99df1995ce7f4edc41644f59ab032277ced2fc8b19b2e667f57ad1b91',1,'util.h']]],
-  ['error6_255',['ERROR6',['../utils_2util_8h.html#a7e02898e99df1995ce7f4edc41644f59a881c295f011150fe4165d428f2e8ec4a',1,'util.h']]],
-  ['error_5fprefix_256',['ERROR_PREFIX',['../logger_8c.html#ab40348328a221f91fc812b2a46e80cb4',1,'logger.c']]],
-  ['example_2emd_257',['EXAMPLE.md',['../spiffetls_2EXAMPLE_8md.html',1,'(Global Namespace)'],['../workload_2EXAMPLE_8md.html',1,'(Global Namespace)']]],
-  ['exemplary_258',['EXEMPLARY',['../COPYING-CMAKE-SCRIPTS_8txt.html#a92bcb6e24174dbd709eac1e226b221d2',1,'COPYING-CMAKE-SCRIPTS.txt']]],
-  ['expiry_259',['expiry',['../structjwtsvid__SVID.html#a3288bd13b81904f924327350528b3cb5',1,'jwtsvid_SVID::expiry()'],['../structjwtsvid__Claims.html#a86ccca83527b0b84b72466b2898eb0cd',1,'jwtsvid_Claims::expiry()']]],
-  ['extra_5faudiences_260',['extra_audiences',['../structjwtsvid__Params.html#aaab27bd4ff22933df4ecf0df9f24cbc6',1,'jwtsvid_Params']]]
+  ['error_5fprefix_253',['ERROR_PREFIX',['../logger_8c.html#ab40348328a221f91fc812b2a46e80cb4',1,'logger.c']]],
+  ['example_2emd_254',['EXAMPLE.md',['../spiffetls_2EXAMPLE_8md.html',1,'(Global Namespace)'],['../workload_2EXAMPLE_8md.html',1,'(Global Namespace)']]],
+  ['exemplary_255',['EXEMPLARY',['../COPYING-CMAKE-SCRIPTS_8txt.html#a92bcb6e24174dbd709eac1e226b221d2',1,'COPYING-CMAKE-SCRIPTS.txt']]],
+  ['expiry_256',['expiry',['../structjwtsvid__SVID.html#a3288bd13b81904f924327350528b3cb5',1,'jwtsvid_SVID::expiry()'],['../structjwtsvid__Claims.html#a86ccca83527b0b84b72466b2898eb0cd',1,'jwtsvid_Claims::expiry()']]],
+  ['extra_5faudiences_257',['extra_audiences',['../structjwtsvid__Params.html#aaab27bd4ff22933df4ecf0df9f24cbc6',1,'jwtsvid_Params']]]
 ];
