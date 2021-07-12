@@ -75,27 +75,36 @@ $(function() {
 <div class="title">svid.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="id_8h_source.html">c-spiffe/spiffeid/id.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="pem_8h_source.html">c-spiffe/internal/pemutil/pem.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="internal_2x509util_2util_8h_source.html">c-spiffe/internal/x509util/util.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="id_8h_source.html">c-spiffe/spiffeid/id.h</a>&quot;</code><br />
+<code>#include &lt;openssl/ecdsa.h&gt;</code><br />
 <code>#include &lt;openssl/evp.h&gt;</code><br />
+<code>#include &lt;openssl/rsa.h&gt;</code><br />
 <code>#include &lt;openssl/x509.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for svid.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="x509svid_2svid_8h__incl.png" border="0" usemap="#ainclude_2c-spiffe_2svid_2x509svid_2svid_8h" alt=""/></div>
 <map name="ainclude_2c-spiffe_2svid_2x509svid_2svid_8h" id="ainclude_2c-spiffe_2svid_2x509svid_2svid_8h">
-<area shape="rect" title=" " alt="" coords="382,5,519,47"/>
-<area shape="rect" href="id_8h.html" title=" " alt="" coords="215,95,348,121"/>
-<area shape="rect" title=" " alt="" coords="430,244,533,271"/>
-<area shape="rect" title=" " alt="" coords="489,95,597,121"/>
-<area shape="rect" href="utils_2util_8h.html" title=" " alt="" coords="260,169,383,196"/>
-<area shape="rect" title=" " alt="" coords="5,244,80,271"/>
-<area shape="rect" title=" " alt="" coords="133,169,235,196"/>
-<area shape="rect" href="stb__ds_8h.html" title=" " alt="" coords="105,244,250,271"/>
-<area shape="rect" href="error_8h.html" title=" " alt="" coords="274,244,406,271"/>
-<area shape="rect" title=" " alt="" coords="225,319,293,345"/>
-<area shape="rect" title=" " alt="" coords="49,319,113,345"/>
-<area shape="rect" title=" " alt="" coords="138,319,201,345"/>
-<area shape="rect" title=" " alt="" coords="317,319,379,345"/>
+<area shape="rect" title=" " alt="" coords="383,5,520,47"/>
+<area shape="rect" href="pem_8h.html" title=" " alt="" coords="140,184,296,225"/>
+<area shape="rect" title=" " alt="" coords="103,348,206,375"/>
+<area shape="rect" title=" " alt="" coords="356,273,464,300"/>
+<area shape="rect" href="internal_2x509util_2util_8h.html" title=" " alt="" coords="372,95,531,136"/>
+<area shape="rect" href="id_8h.html" title=" " alt="" coords="657,191,790,218"/>
+<area shape="rect" title=" " alt="" coords="607,102,723,129"/>
+<area shape="rect" title=" " alt="" coords="748,102,846,129"/>
+<area shape="rect" href="utils_2util_8h.html" title=" " alt="" coords="540,273,662,300"/>
+<area shape="rect" title=" " alt="" coords="174,273,281,300"/>
+<area shape="rect" title=" " alt="" coords="28,273,150,300"/>
+<area shape="rect" href="stb__ds_8h.html" title=" " alt="" coords="430,348,575,375"/>
+<area shape="rect" title=" " alt="" coords="574,423,638,449"/>
+<area shape="rect" title=" " alt="" coords="656,348,730,375"/>
+<area shape="rect" title=" " alt="" coords="384,423,452,449"/>
+<area shape="rect" title=" " alt="" coords="476,423,539,449"/>
+<area shape="rect" href="certpool_8h.html" title=" " alt="" coords="423,184,582,225"/>
+<area shape="rect" title=" " alt="" coords="738,273,840,300"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -103,56 +112,56 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="x509svid_2svid_8h__dep__incl.png" border="0" usemap="#ainclude_2c-spiffe_2svid_2x509svid_2svid_8hdep" alt=""/></div>
 <map name="ainclude_2c-spiffe_2svid_2x509svid_2svid_8hdep" id="ainclude_2c-spiffe_2svid_2x509svid_2svid_8hdep">
-<area shape="rect" title=" " alt="" coords="2119,5,2256,47"/>
-<area shape="rect" href="svid_2x509svid_2source_8h.html" title=" " alt="" coords="161,452,299,493"/>
-<area shape="rect" href="x509svid_8h.html" title=" " alt="" coords="5,541,143,583"/>
-<area shape="rect" href="client_8h.html" title=" " alt="" coords="1631,184,1797,225"/>
-<area shape="rect" href="x509source_8h.html" title=" " alt="" coords="1757,363,1922,404"/>
-<area shape="rect" href="check__x509source_8c.html" title=" " alt="" coords="1163,452,1310,493"/>
-<area shape="rect" href="client_8cc.html" title=" " alt="" coords="512,281,639,307"/>
-<area shape="rect" href="check__client_8cc.html" title=" " alt="" coords="2230,273,2377,315"/>
-<area shape="rect" href="x509context_8h.html" title=" " alt="" coords="1990,95,2155,136"/>
-<area shape="rect" href="peerid_8c.html" title=" " alt="" coords="2420,102,2536,129"/>
-<area shape="rect" href="x509svid_2svid_8c.html" title=" " alt="" coords="2561,102,2699,129"/>
-<area shape="rect" href="x509svid_2tests_2check__svid_8c.html" title=" " alt="" coords="2724,95,2859,136"/>
-<area shape="rect" href="verify_8c.html" title=" " alt="" coords="2883,102,3030,129"/>
-<area shape="rect" href="mode_8h.html" title=" " alt="" coords="1877,541,2036,583"/>
-<area shape="rect" href="config_8h.html" title=" " alt="" coords="1233,541,1392,583"/>
-<area shape="rect" href="svid_2x509svid_2source_8c.html" title=" " alt="" coords="167,549,322,575"/>
-<area shape="rect" href="check__svidsource_8c.html" title=" " alt="" coords="346,541,493,583"/>
-<area shape="rect" href="spiffe-jwt_2server_2main_8c.html" title=" " alt="" coords="1342,720,1475,761"/>
-<area shape="rect" href="spiffe-tls_2client_2main_8c.html" title=" " alt="" coords="1625,720,1755,761"/>
-<area shape="rect" href="spiffe-tls_2server_2main_8c.html" title=" " alt="" coords="2275,720,2406,761"/>
-<area shape="rect" href="dial_8h.html" title=" " alt="" coords="1721,631,1880,672"/>
-<area shape="rect" href="spiffetls_8h.html" title=" " alt="" coords="1943,720,2101,761"/>
-<area shape="rect" href="dial_8c.html" title=" " alt="" coords="1499,727,1601,754"/>
-<area shape="rect" href="check__peerid_8c.html" title=" " alt="" coords="1779,720,1918,761"/>
-<area shape="rect" href="listen_8h.html" title=" " alt="" coords="2007,631,2165,672"/>
-<area shape="rect" href="listen_8c.html" title=" " alt="" coords="2139,727,2251,754"/>
-<area shape="rect" href="mode_8c.html" title=" " alt="" coords="2343,638,2456,665"/>
-<area shape="rect" href="check__mode_8c.html" title=" " alt="" coords="2481,631,2619,672"/>
-<area shape="rect" href="spiffe-jwt_2client_2main_8c.html" title=" " alt="" coords="713,631,846,672"/>
-<area shape="rect" href="tlsconfig_8h.html" title=" " alt="" coords="1183,631,1341,672"/>
-<area shape="rect" href="config_8c.html" title=" " alt="" coords="871,631,989,672"/>
-<area shape="rect" href="check__config_8c.html" title=" " alt="" coords="1013,631,1159,672"/>
-<area shape="rect" href="jwtwatcher_8h.html" title=" " alt="" coords="714,273,879,315"/>
-<area shape="rect" href="workload_8h.html" title=" " alt="" coords="974,452,1139,493"/>
-<area shape="rect" href="jwtwatcher_8c.html" title=" " alt="" coords="207,370,357,397"/>
-<area shape="rect" href="workload_2watcher_8h.html" title=" " alt="" coords="1990,273,2155,315"/>
-<area shape="rect" href="workload_2watcher_8c.html" title=" " alt="" coords="2175,459,2309,486"/>
-<area shape="rect" href="c__client__example_8c.html" title=" " alt="" coords="1209,281,1397,307"/>
-<area shape="rect" href="c__client__example__bundle_8c.html" title=" " alt="" coords="1422,273,1601,315"/>
-<area shape="rect" href="c__client__example__validate_8c.html" title=" " alt="" coords="1625,273,1803,315"/>
-<area shape="rect" href="cpp__client__example_8cc.html" title=" " alt="" coords="1828,273,1965,315"/>
-<area shape="rect" href="jwtsource_8h.html" title=" " alt="" coords="483,363,649,404"/>
-<area shape="rect" href="jwtsource_8c.html" title=" " alt="" coords="494,459,638,486"/>
-<area shape="rect" href="check__jwtsource_8c.html" title=" " alt="" coords="323,452,470,493"/>
-<area shape="rect" href="check__jwtwatcher_8c.html" title=" " alt="" coords="723,363,870,404"/>
-<area shape="rect" href="watch__jwt__bundles_8c.html" title=" " alt="" coords="895,363,1032,404"/>
-<area shape="rect" href="x509source_8c.html" title=" " alt="" coords="1995,459,2150,486"/>
-<area shape="rect" href="workload_2tests_2check__watcher_8c.html" title=" " alt="" coords="1586,363,1733,404"/>
-<area shape="rect" href="bundle_2x509bundle_2source_8h.html" title=" " alt="" coords="1703,452,1853,493"/>
-<area shape="rect" href="bundle_2x509bundle_2source_8c.html" title=" " alt="" coords="1671,549,1853,575"/>
+<area shape="rect" title=" " alt="" coords="2009,5,2146,47"/>
+<area shape="rect" href="mode_8h.html" title=" " alt="" coords="1087,541,1246,583"/>
+<area shape="rect" href="svid_2x509svid_2source_8h.html" title=" " alt="" coords="747,452,885,493"/>
+<area shape="rect" href="x509svid_8h.html" title=" " alt="" coords="225,541,362,583"/>
+<area shape="rect" href="client_8h.html" title=" " alt="" coords="2055,184,2220,225"/>
+<area shape="rect" href="workload_2watcher_8h.html" title=" " alt="" coords="1764,273,1929,315"/>
+<area shape="rect" href="x509source_8h.html" title=" " alt="" coords="1391,363,1556,404"/>
+<area shape="rect" href="check__x509source_8c.html" title=" " alt="" coords="1701,452,1848,493"/>
+<area shape="rect" href="client_8cc.html" title=" " alt="" coords="3178,281,3305,307"/>
+<area shape="rect" href="check__client_8cc.html" title=" " alt="" coords="3329,273,3476,315"/>
+<area shape="rect" href="x509context_8h.html" title=" " alt="" coords="1935,95,2100,136"/>
+<area shape="rect" href="peerid_8c.html" title=" " alt="" coords="2346,102,2462,129"/>
+<area shape="rect" href="x509svid_2svid_8c.html" title=" " alt="" coords="2487,102,2625,129"/>
+<area shape="rect" href="x509svid_2tests_2check__svid_8c.html" title=" " alt="" coords="2650,95,2785,136"/>
+<area shape="rect" href="verify_8c.html" title=" " alt="" coords="2809,102,2956,129"/>
+<area shape="rect" href="spiffe-jwt_2server_2main_8c.html" title=" " alt="" coords="1905,720,2039,761"/>
+<area shape="rect" href="spiffe-tls_2client_2main_8c.html" title=" " alt="" coords="1109,720,1240,761"/>
+<area shape="rect" href="spiffe-tls_2server_2main_8c.html" title=" " alt="" coords="1751,720,1881,761"/>
+<area shape="rect" href="dial_8h.html" title=" " alt="" coords="1087,631,1246,672"/>
+<area shape="rect" href="spiffetls_8h.html" title=" " alt="" coords="1265,720,1423,761"/>
+<area shape="rect" href="dial_8c.html" title=" " alt="" coords="491,727,592,754"/>
+<area shape="rect" href="listen_8c.html" title=" " alt="" coords="616,727,728,754"/>
+<area shape="rect" href="check__peerid_8c.html" title=" " alt="" coords="328,720,467,761"/>
+<area shape="rect" href="listen_8h.html" title=" " alt="" coords="1423,631,1582,672"/>
+<area shape="rect" href="mode_8c.html" title=" " alt="" coords="735,638,849,665"/>
+<area shape="rect" href="check__mode_8c.html" title=" " alt="" coords="873,631,1012,672"/>
+<area shape="rect" href="c__dial__example_8c.html" title=" " alt="" coords="752,727,923,754"/>
+<area shape="rect" href="check__dial_8c.html" title=" " alt="" coords="947,720,1085,761"/>
+<area shape="rect" href="c__listen__example_8c.html" title=" " alt="" coords="1447,720,1563,761"/>
+<area shape="rect" href="check__listen_8c.html" title=" " alt="" coords="1588,720,1727,761"/>
+<area shape="rect" href="config_8h.html" title=" " alt="" coords="737,541,895,583"/>
+<area shape="rect" href="svid_2x509svid_2source_8c.html" title=" " alt="" coords="557,549,712,575"/>
+<area shape="rect" href="check__svidsource_8c.html" title=" " alt="" coords="387,541,533,583"/>
+<area shape="rect" href="spiffe-jwt_2client_2main_8c.html" title=" " alt="" coords="1759,631,1892,672"/>
+<area shape="rect" href="tlsconfig_8h.html" title=" " alt="" coords="37,631,195,672"/>
+<area shape="rect" href="config_8c.html" title=" " alt="" coords="219,631,338,672"/>
+<area shape="rect" href="check__config_8c.html" title=" " alt="" coords="362,631,507,672"/>
+<area shape="rect" href="jwtwatcher_8h.html" title=" " alt="" coords="2988,273,3153,315"/>
+<area shape="rect" href="workload_8h.html" title=" " alt="" coords="2365,452,2531,493"/>
+<area shape="rect" href="jwtwatcher_8c.html" title=" " alt="" coords="2702,370,2853,397"/>
+<area shape="rect" href="workload_2watcher_8c.html" title=" " alt="" coords="2051,459,2186,486"/>
+<area shape="rect" href="c__client__example_8c.html" title=" " alt="" coords="2157,281,2345,307"/>
+<area shape="rect" href="c__client__example__bundle_8c.html" title=" " alt="" coords="2369,273,2548,315"/>
+<area shape="rect" href="c__client__example__validate_8c.html" title=" " alt="" coords="2572,273,2751,315"/>
+<area shape="rect" href="cpp__client__example_8cc.html" title=" " alt="" coords="2775,273,2913,315"/>
+<area shape="rect" href="jwtsource_8h.html" title=" " alt="" coords="2928,363,3093,404"/>
+<area shape="rect" href="jwtsource_8c.html" title=" " alt="" coords="2999,459,3143,486"/>
+<area shape="rect" href="x509source_8c.html" title=" " alt="" coords="1872,459,2027,486"/>
+<area shape="rect" href="workload_2tests_2check__watcher_8c.html" title=" " alt="" coords="1631,363,1777,404"/>
+<area shape="rect" href="bundle_2x509bundle_2source_8h.html" title=" " alt="" coords="1146,452,1297,493"/>
 </map>
 </div>
 </div>
@@ -170,33 +179,33 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a08ea0aeb3b19614ed65d2c34239b698e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a08ea0aeb3b19614ed65d2c34239b698e">x509svid_Load</a> (const char *certfile, const char *keyfile, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a08ea0aeb3b19614ed65d2c34239b698e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a08ea0aeb3b19614ed65d2c34239b698e">x509svid_Load</a> (const char *certfile, const char *keyfile, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a08ea0aeb3b19614ed65d2c34239b698e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0327f55d0ce873943dcd4b27eff5631a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a0327f55d0ce873943dcd4b27eff5631a">x509svid_Parse</a> (const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *certbytes, const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *keybytes, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a0327f55d0ce873943dcd4b27eff5631a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a0327f55d0ce873943dcd4b27eff5631a">x509svid_Parse</a> (const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *certbytes, const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *keybytes, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a0327f55d0ce873943dcd4b27eff5631a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96574cd2c7c3e0b5af2e0319096aa651"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a96574cd2c7c3e0b5af2e0319096aa651">x509svid_ParseRaw</a> (const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *certbytes, const size_t certlen, const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *keybytes, const size_t keylen, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a96574cd2c7c3e0b5af2e0319096aa651"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a96574cd2c7c3e0b5af2e0319096aa651">x509svid_ParseRaw</a> (const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *certbytes, const size_t certlen, const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *keybytes, const size_t keylen, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a96574cd2c7c3e0b5af2e0319096aa651"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff4b0f5b2fc1d905fa383f6a4e7670b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#aff4b0f5b2fc1d905fa383f6a4e7670b8">x509svid_newSVID</a> (X509 **<a class="el" href="check__x509source_8c.html#a86cc65f14198e068d60b43bcf233a074">certs</a>, EVP_PKEY *pkey, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:aff4b0f5b2fc1d905fa383f6a4e7670b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#aff4b0f5b2fc1d905fa383f6a4e7670b8">x509svid_newSVID</a> (X509 **<a class="el" href="check__x509source_8c.html#a86cc65f14198e068d60b43bcf233a074">certs</a>, EVP_PKEY *pkey, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:aff4b0f5b2fc1d905fa383f6a4e7670b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb22b1aca190a0adc6d45c98ebbd9b79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspiffeid__ID.html">spiffeid_ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#abb22b1aca190a0adc6d45c98ebbd9b79">x509svid_validateCertificates</a> (X509 **<a class="el" href="check__x509source_8c.html#a86cc65f14198e068d60b43bcf233a074">certs</a>, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:abb22b1aca190a0adc6d45c98ebbd9b79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspiffeid__ID.html">spiffeid_ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#abb22b1aca190a0adc6d45c98ebbd9b79">x509svid_validateCertificates</a> (X509 **<a class="el" href="check__x509source_8c.html#a86cc65f14198e068d60b43bcf233a074">certs</a>, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:abb22b1aca190a0adc6d45c98ebbd9b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6296356ca33ec01a0c3726c15d14775d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspiffeid__ID.html">spiffeid_ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a6296356ca33ec01a0c3726c15d14775d">x509svid_validateLeafCertificate</a> (X509 *cert, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a6296356ca33ec01a0c3726c15d14775d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspiffeid__ID.html">spiffeid_ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a6296356ca33ec01a0c3726c15d14775d">x509svid_validateLeafCertificate</a> (X509 *cert, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a6296356ca33ec01a0c3726c15d14775d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac64e73a4241e928e009af785b429d50d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#ac64e73a4241e928e009af785b429d50d">x509svid_validateSigningCertificates</a> (X509 **<a class="el" href="check__x509source_8c.html#a86cc65f14198e068d60b43bcf233a074">certs</a>, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:ac64e73a4241e928e009af785b429d50d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#ac64e73a4241e928e009af785b429d50d">x509svid_validateSigningCertificates</a> (X509 **<a class="el" href="check__x509source_8c.html#a86cc65f14198e068d60b43bcf233a074">certs</a>, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:ac64e73a4241e928e009af785b429d50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac780ee789eef18d6d42616d1cd7bac83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#ac780ee789eef18d6d42616d1cd7bac83">x509svid_validateKeyUsage</a> (X509 *cert, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:ac780ee789eef18d6d42616d1cd7bac83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#ac780ee789eef18d6d42616d1cd7bac83">x509svid_validateKeyUsage</a> (X509 *cert, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:ac780ee789eef18d6d42616d1cd7bac83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14454e8a13a1a67fc860bf0dd2db88de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a14454e8a13a1a67fc860bf0dd2db88de">x509svid_SVID_GetX509SVID</a> (<a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a14454e8a13a1a67fc860bf0dd2db88de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a14454e8a13a1a67fc860bf0dd2db88de">x509svid_SVID_GetX509SVID</a> (<a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a14454e8a13a1a67fc860bf0dd2db88de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0750132b7a9b78680449a8db1749af01"><td class="memItemLeft" align="right" valign="top">EVP_PKEY *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a0750132b7a9b78680449a8db1749af01">x509svid_validatePrivateKey</a> (EVP_PKEY *priv_key, X509 *cert, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a0750132b7a9b78680449a8db1749af01"><td class="memItemLeft" align="right" valign="top">EVP_PKEY *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a0750132b7a9b78680449a8db1749af01">x509svid_validatePrivateKey</a> (EVP_PKEY *priv_key, X509 *cert, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a0750132b7a9b78680449a8db1749af01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b54ccd57184989d06e15d2bdc654306"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a9b54ccd57184989d06e15d2bdc654306">x509svid_keyMatches</a> (EVP_PKEY *priv_key, EVP_PKEY *pub_key, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a9b54ccd57184989d06e15d2bdc654306"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a9b54ccd57184989d06e15d2bdc654306">x509svid_keyMatches</a> (EVP_PKEY *priv_key, EVP_PKEY *pub_key, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a9b54ccd57184989d06e15d2bdc654306"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86bb0aab37f97488bf2dadfbd672e58f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a86bb0aab37f97488bf2dadfbd672e58f">x509svid_SVID_Free</a> (<a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>)</td></tr>
 <tr class="separator:a86bb0aab37f97488bf2dadfbd672e58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65d6f203d0eeacd144e974e8d2616854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a65d6f203d0eeacd144e974e8d2616854">x509svid_SVID_GetDefaultX509SVID</a> (<a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> **<a class="el" href="check__x509source_8c.html#afddf11b35962192583095189618f0562">svids</a>)</td></tr>
 <tr class="separator:a65d6f203d0eeacd144e974e8d2616854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a71833432762f29b35b7c0807a65195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspiffeid__ID.html">spiffeid_ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a3a71833432762f29b35b7c0807a65195">x509svid_IDFromCert</a> (X509 *cert, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a3a71833432762f29b35b7c0807a65195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspiffeid__ID.html">spiffeid_ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8h.html#a3a71833432762f29b35b7c0807a65195">x509svid_IDFromCert</a> (X509 *cert, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a3a71833432762f29b35b7c0807a65195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -231,7 +240,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -274,7 +283,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -308,7 +317,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -352,7 +361,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -396,7 +405,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -452,7 +461,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -543,7 +552,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -571,7 +580,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -608,7 +617,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -636,7 +645,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -670,7 +679,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -698,7 +707,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>

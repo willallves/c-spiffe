@@ -73,72 +73,65 @@ $(function() {
 <div class="title">svid.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="pem_8h_source.html">c-spiffe/internal/pemutil/pem.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="internal_2x509util_2util_8h_source.html">c-spiffe/internal/x509util/util.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="x509svid_2svid_8h_source.html">c-spiffe/svid/x509svid/svid.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="x509svid_2svid_8h_source.html">c-spiffe/svid/x509svid/svid.h</a>&quot;</code><br />
 <code>#include &lt;openssl/bn.h&gt;</code><br />
-<code>#include &lt;openssl/ecdsa.h&gt;</code><br />
-<code>#include &lt;openssl/rsa.h&gt;</code><br />
-<code>#include &lt;openssl/x509v3.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for svid.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="x509svid_2svid_8c__incl.png" border="0" usemap="#asvid_2x509svid_2svid_8c" alt=""/></div>
 <map name="asvid_2x509svid_2svid_8c" id="asvid_2x509svid_2svid_8c">
-<area shape="rect" title=" " alt="" coords="591,5,729,32"/>
-<area shape="rect" href="pem_8h.html" title=" " alt="" coords="6,169,162,211"/>
-<area shape="rect" href="internal_2x509util_2util_8h.html" title=" " alt="" coords="258,80,417,121"/>
-<area shape="rect" href="x509svid_2svid_8h.html" title=" " alt="" coords="441,80,588,121"/>
-<area shape="rect" title=" " alt="" coords="613,87,707,114"/>
-<area shape="rect" title=" " alt="" coords="731,87,847,114"/>
-<area shape="rect" title=" " alt="" coords="872,87,971,114"/>
-<area shape="rect" title=" " alt="" coords="995,87,1117,114"/>
-<area shape="rect" href="utils_2util_8h.html" title=" " alt="" coords="483,259,605,285"/>
-<area shape="rect" title=" " alt="" coords="187,333,290,360"/>
-<area shape="rect" title=" " alt="" coords="5,259,112,285"/>
-<area shape="rect" title=" " alt="" coords="273,259,381,285"/>
-<area shape="rect" href="stb__ds_8h.html" title=" " alt="" coords="494,333,639,360"/>
-<area shape="rect" href="error_8h.html" title=" " alt="" coords="330,333,462,360"/>
-<area shape="rect" title=" " alt="" coords="709,333,784,360"/>
-<area shape="rect" title=" " alt="" coords="446,408,514,435"/>
-<area shape="rect" title=" " alt="" coords="539,408,603,435"/>
-<area shape="rect" title=" " alt="" coords="627,408,690,435"/>
-<area shape="rect" title=" " alt="" coords="360,408,421,435"/>
-<area shape="rect" href="certpool_8h.html" title=" " alt="" coords="289,169,447,211"/>
-<area shape="rect" href="id_8h.html" title=" " alt="" coords="624,177,757,203"/>
-<area shape="rect" title=" " alt="" coords="630,259,733,285"/>
+<area shape="rect" title=" " alt="" coords="454,5,593,32"/>
+<area shape="rect" href="x509svid_2svid_8h.html" title=" " alt="" coords="378,80,525,121"/>
+<area shape="rect" title=" " alt="" coords="550,87,644,114"/>
+<area shape="rect" href="pem_8h.html" title=" " alt="" coords="140,259,296,300"/>
+<area shape="rect" title=" " alt="" coords="103,423,206,449"/>
+<area shape="rect" title=" " alt="" coords="356,348,464,375"/>
+<area shape="rect" href="internal_2x509util_2util_8h.html" title=" " alt="" coords="372,169,531,211"/>
+<area shape="rect" href="id_8h.html" title=" " alt="" coords="657,266,790,293"/>
+<area shape="rect" title=" " alt="" coords="607,177,723,203"/>
+<area shape="rect" title=" " alt="" coords="748,177,846,203"/>
+<area shape="rect" href="utils_2util_8h.html" title=" " alt="" coords="540,348,662,375"/>
+<area shape="rect" title=" " alt="" coords="174,348,281,375"/>
+<area shape="rect" title=" " alt="" coords="28,348,150,375"/>
+<area shape="rect" href="stb__ds_8h.html" title=" " alt="" coords="430,423,575,449"/>
+<area shape="rect" title=" " alt="" coords="574,497,638,524"/>
+<area shape="rect" title=" " alt="" coords="656,423,730,449"/>
+<area shape="rect" title=" " alt="" coords="384,497,452,524"/>
+<area shape="rect" title=" " alt="" coords="476,497,539,524"/>
+<area shape="rect" href="certpool_8h.html" title=" " alt="" coords="423,259,582,300"/>
+<area shape="rect" title=" " alt="" coords="738,348,840,375"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a08ea0aeb3b19614ed65d2c34239b698e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a08ea0aeb3b19614ed65d2c34239b698e">x509svid_Load</a> (const char *certfile, const char *keyfile, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a08ea0aeb3b19614ed65d2c34239b698e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a08ea0aeb3b19614ed65d2c34239b698e">x509svid_Load</a> (const char *certfile, const char *keyfile, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a08ea0aeb3b19614ed65d2c34239b698e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0327f55d0ce873943dcd4b27eff5631a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a0327f55d0ce873943dcd4b27eff5631a">x509svid_Parse</a> (const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *certbytes, const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *keybytes, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a0327f55d0ce873943dcd4b27eff5631a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a0327f55d0ce873943dcd4b27eff5631a">x509svid_Parse</a> (const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *certbytes, const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *keybytes, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a0327f55d0ce873943dcd4b27eff5631a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96574cd2c7c3e0b5af2e0319096aa651"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a96574cd2c7c3e0b5af2e0319096aa651">x509svid_ParseRaw</a> (const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *certbytes, const size_t certlen, const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *keybytes, const size_t keylen, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a96574cd2c7c3e0b5af2e0319096aa651"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a96574cd2c7c3e0b5af2e0319096aa651">x509svid_ParseRaw</a> (const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *certbytes, const size_t certlen, const <a class="el" href="utils_2util_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *keybytes, const size_t keylen, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a96574cd2c7c3e0b5af2e0319096aa651"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff4b0f5b2fc1d905fa383f6a4e7670b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#aff4b0f5b2fc1d905fa383f6a4e7670b8">x509svid_newSVID</a> (X509 **<a class="el" href="check__x509source_8c.html#a86cc65f14198e068d60b43bcf233a074">certs</a>, EVP_PKEY *pkey, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:aff4b0f5b2fc1d905fa383f6a4e7670b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#aff4b0f5b2fc1d905fa383f6a4e7670b8">x509svid_newSVID</a> (X509 **<a class="el" href="check__x509source_8c.html#a86cc65f14198e068d60b43bcf233a074">certs</a>, EVP_PKEY *pkey, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:aff4b0f5b2fc1d905fa383f6a4e7670b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb22b1aca190a0adc6d45c98ebbd9b79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspiffeid__ID.html">spiffeid_ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#abb22b1aca190a0adc6d45c98ebbd9b79">x509svid_validateCertificates</a> (X509 **<a class="el" href="check__x509source_8c.html#a86cc65f14198e068d60b43bcf233a074">certs</a>, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:abb22b1aca190a0adc6d45c98ebbd9b79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspiffeid__ID.html">spiffeid_ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#abb22b1aca190a0adc6d45c98ebbd9b79">x509svid_validateCertificates</a> (X509 **<a class="el" href="check__x509source_8c.html#a86cc65f14198e068d60b43bcf233a074">certs</a>, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:abb22b1aca190a0adc6d45c98ebbd9b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6296356ca33ec01a0c3726c15d14775d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspiffeid__ID.html">spiffeid_ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a6296356ca33ec01a0c3726c15d14775d">x509svid_validateLeafCertificate</a> (X509 *cert, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a6296356ca33ec01a0c3726c15d14775d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspiffeid__ID.html">spiffeid_ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a6296356ca33ec01a0c3726c15d14775d">x509svid_validateLeafCertificate</a> (X509 *cert, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a6296356ca33ec01a0c3726c15d14775d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac64e73a4241e928e009af785b429d50d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#ac64e73a4241e928e009af785b429d50d">x509svid_validateSigningCertificates</a> (X509 **<a class="el" href="check__x509source_8c.html#a86cc65f14198e068d60b43bcf233a074">certs</a>, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:ac64e73a4241e928e009af785b429d50d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#ac64e73a4241e928e009af785b429d50d">x509svid_validateSigningCertificates</a> (X509 **<a class="el" href="check__x509source_8c.html#a86cc65f14198e068d60b43bcf233a074">certs</a>, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:ac64e73a4241e928e009af785b429d50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac780ee789eef18d6d42616d1cd7bac83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#ac780ee789eef18d6d42616d1cd7bac83">x509svid_validateKeyUsage</a> (X509 *cert, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:ac780ee789eef18d6d42616d1cd7bac83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#ac780ee789eef18d6d42616d1cd7bac83">x509svid_validateKeyUsage</a> (X509 *cert, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:ac780ee789eef18d6d42616d1cd7bac83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14454e8a13a1a67fc860bf0dd2db88de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a14454e8a13a1a67fc860bf0dd2db88de">x509svid_SVID_GetX509SVID</a> (<a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a14454e8a13a1a67fc860bf0dd2db88de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a14454e8a13a1a67fc860bf0dd2db88de">x509svid_SVID_GetX509SVID</a> (<a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a14454e8a13a1a67fc860bf0dd2db88de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0750132b7a9b78680449a8db1749af01"><td class="memItemLeft" align="right" valign="top">EVP_PKEY *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a0750132b7a9b78680449a8db1749af01">x509svid_validatePrivateKey</a> (EVP_PKEY *priv_key, X509 *cert, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a0750132b7a9b78680449a8db1749af01"><td class="memItemLeft" align="right" valign="top">EVP_PKEY *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a0750132b7a9b78680449a8db1749af01">x509svid_validatePrivateKey</a> (EVP_PKEY *priv_key, X509 *cert, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a0750132b7a9b78680449a8db1749af01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b54ccd57184989d06e15d2bdc654306"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a9b54ccd57184989d06e15d2bdc654306">x509svid_keyMatches</a> (EVP_PKEY *priv_key, EVP_PKEY *pub_key, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a9b54ccd57184989d06e15d2bdc654306"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a9b54ccd57184989d06e15d2bdc654306">x509svid_keyMatches</a> (EVP_PKEY *priv_key, EVP_PKEY *pub_key, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a9b54ccd57184989d06e15d2bdc654306"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86bb0aab37f97488bf2dadfbd672e58f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a86bb0aab37f97488bf2dadfbd672e58f">x509svid_SVID_Free</a> (<a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *<a class="el" href="check__jwtsource_8c.html#a7dc8f87a6d2bcbcb06f9f58b42155676">svid</a>)</td></tr>
 <tr class="separator:a86bb0aab37f97488bf2dadfbd672e58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65d6f203d0eeacd144e974e8d2616854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a65d6f203d0eeacd144e974e8d2616854">x509svid_SVID_GetDefaultX509SVID</a> (<a class="el" href="structx509svid__SVID.html">x509svid_SVID</a> **<a class="el" href="check__x509source_8c.html#afddf11b35962192583095189618f0562">svids</a>)</td></tr>
 <tr class="separator:a65d6f203d0eeacd144e974e8d2616854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a71833432762f29b35b7c0807a65195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspiffeid__ID.html">spiffeid_ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a3a71833432762f29b35b7c0807a65195">x509svid_IDFromCert</a> (X509 *cert, <a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
+<tr class="memitem:a3a71833432762f29b35b7c0807a65195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structspiffeid__ID.html">spiffeid_ID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="x509svid_2svid_8c.html#a3a71833432762f29b35b7c0807a65195">x509svid_IDFromCert</a> (X509 *cert, <a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *<a class="el" href="check__endpoint_8c.html#aac2cb6376062ef4d6f16d129f52ea9e4">err</a>)</td></tr>
 <tr class="separator:a3a71833432762f29b35b7c0807a65195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -157,7 +150,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -200,7 +193,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -234,7 +227,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -278,7 +271,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -322,7 +315,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -378,7 +371,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -469,7 +462,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -497,7 +490,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -534,7 +527,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -562,7 +555,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -596,7 +589,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
@@ -624,7 +617,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="error_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="utils_2util_8h.html#a5362d878a3b55147d5cfd29820512556">err_t</a> *&#160;</td>
           <td class="paramname"><em>err</em>&#160;</td>
         </tr>
         <tr>
