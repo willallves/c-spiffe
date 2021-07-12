@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['endpoint_2ec_1170',['endpoint.c',['../endpoint_8c.html',1,'']]],
-  ['endpoint_2eh_1171',['endpoint.h',['../endpoint_8h.html',1,'']]],
-  ['endpoint_5fexample_2ec_1172',['endpoint_example.c',['../endpoint__example_8c.html',1,'']]],
-  ['environment_2epy_1173',['environment.py',['../environment_8py.html',1,'']]],
-  ['example_2emd_1174',['EXAMPLE.md',['../spiffetls_2EXAMPLE_8md.html',1,'(Global Namespace)'],['../workload_2EXAMPLE_8md.html',1,'(Global Namespace)']]]
+  ['endpoint_2ec_1222',['endpoint.c',['../endpoint_8c.html',1,'']]],
+  ['endpoint_2eh_1223',['endpoint.h',['../endpoint_8h.html',1,'']]],
+  ['endpoint_5fexample_2ec_1224',['endpoint_example.c',['../endpoint__example_8c.html',1,'']]],
+  ['environment_2epy_1225',['environment.py',['../environment_8py.html',1,'']]],
+  ['error_2eh_1226',['error.h',['../error_8h.html',1,'']]],
+  ['example_2emd_1227',['EXAMPLE.md',['../spiffetls_2EXAMPLE_8md.html',1,'(Global Namespace)'],['../workload_2EXAMPLE_8md.html',1,'(Global Namespace)']]]
 ];
