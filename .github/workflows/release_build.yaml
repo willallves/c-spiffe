@@ -5,6 +5,12 @@ on:
       - master
 
 jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
   build:
     runs-on: ubuntu-latest
 
@@ -16,14 +22,14 @@ jobs:
       id: tag_version
       uses: mathieudutour/github-tag-action@v5.5
       with:
-        github_token: ${{ github.token }}
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
         tag_prefix: "v"
 
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
-        github_token: ${{ github.token }}
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       with:
           tag_name: ${{ steps.tag_version.outputs.new_tag }}
