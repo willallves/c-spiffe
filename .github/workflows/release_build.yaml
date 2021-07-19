@@ -1,8 +1,6 @@
 name: Create a Release
 on: 
   pull_request_target:
-    branches: 
-      - master
 
 jobs:
   build:
