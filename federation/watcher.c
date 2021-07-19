@@ -76,14 +76,14 @@ spiffebundle_Bundle *spiffebundle_Watcher_GetBundleForTrustDomain(
     err_t *err)
 {
     if(!watcher) {
-        *err = ERROR1;
+        *err = ERR_NULL;
         return NULL;
     }
     if(trust_domain.name) {
         spiffebundle_Endpoint_Status *status
             = shget(watcher->endpoints, trust_domain.name);
         if(status == NULL) {
-            *err = ERROR3;
+            *err = ERR_NULL;
             return NULL;
         } else {
             *err = NO_ERROR;
@@ -92,7 +92,7 @@ spiffebundle_Bundle *spiffebundle_Watcher_GetBundleForTrustDomain(
         }
 
     } else {
-        *err = ERROR2;
+        *err = ERR_INVALID_DATA;
         return NULL;
     }
 }
@@ -113,9 +113,9 @@ static int watch_endpoint(void *arg)
         struct timespec waittime
             = { .tv_sec = DEFAULT_REFRESH_HINT, .tv_nsec = 0 };
 
-        if(bundle->refresh_hint.tv_sec > 0
-           || (bundle->refresh_hint.tv_sec == 0
-               && bundle->refresh_hint.tv_nsec > 0)) {
+        if((bundle->refresh_hint.tv_sec == 0
+            && bundle->refresh_hint.tv_nsec > 0)
+           || bundle->refresh_hint.tv_sec > 0) {
             waittime = bundle->refresh_hint;
         }
 
@@ -151,7 +151,7 @@ err_t spiffebundle_Watcher_Start(spiffebundle_Watcher *watcher)
         }
         return NO_ERROR;
     }
-    return ERROR1;
+    return ERR_STARTING;
 }
 
 err_t spiffebundle_Watcher_Stop(spiffebundle_Watcher *watcher)
@@ -174,7 +174,7 @@ err_t spiffebundle_Watcher_Stop(spiffebundle_Watcher *watcher)
         }
         return NO_ERROR;
     }
-    return ERROR1;
+    return ERR_STOPPING;
 }
 
 spiffebundle_Endpoint_StatusCode
@@ -182,21 +182,21 @@ spiffebundle_Watcher_GetStatus(spiffebundle_Watcher *watcher,
                                const spiffeid_TrustDomain td, err_t *err)
 {
     if(!watcher) {
-        *err = ERROR1;
+        *err = ERR_NULL;
         return ENDPOINT_ERROR; // not found
     }
     if(td.name) {
         spiffebundle_Endpoint_Status *status
             = shget(watcher->endpoints, td.name);
         if(status == NULL) {
-            *err = ERROR3;
+            *err = ERR_NULL;
             return ENDPOINT_ERROR; // not found
         } else {
             *err = NO_ERROR;
             return status->running;
         }
     } else {
-        *err = ERROR2;
+        *err = ERR_INVALID_DATA;
         return ENDPOINT_ERROR; // not found
     }
 }

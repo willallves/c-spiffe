@@ -42,33 +42,33 @@ START_TEST(test_federation_Endpoint_Config_SPIFFE);
 
     err = spiffebundle_Endpoint_ConfigHTTPSSPIFFE(
         NULL, "example.com/bundle.json", td, sid, bundle_source);
-    ck_assert_int_eq(err, ERROR1);
+    ck_assert_int_eq(err, ERR_NULL);
 
     err = spiffebundle_Endpoint_ConfigHTTPSSPIFFE(tested, NULL, td, sid,
                                                   bundle_source);
-    ck_assert_int_eq(err, ERROR2);
+    ck_assert_int_eq(err, ERR_EMPTY_DATA);
 
     err = spiffebundle_Endpoint_ConfigHTTPSSPIFFE(tested, "not an URL", td,
                                                   sid, bundle_source);
-    ck_assert_int_eq(err, ERROR2);
+    ck_assert_int_eq(err, ERR_INVALID_DATA);
 
     spiffeid_TrustDomain err_td = { NULL };
     err = spiffebundle_Endpoint_ConfigHTTPSSPIFFE(
         tested, "example.com/bundle.json", err_td, sid, bundle_source);
-    ck_assert_int_eq(err, ERROR3);
+    ck_assert_int_eq(err, ERR_INVALID_TRUSTDOMAIN);
     spiffeid_TrustDomain err_td2 = { "not_a_td://NU,,LL" };
     err = spiffebundle_Endpoint_ConfigHTTPSSPIFFE(
         tested, "example.com/bundle.json", err_td2, sid, bundle_source);
-    ck_assert_int_eq(err, ERROR3);
+    ck_assert_int_eq(err, ERR_INVALID_TRUSTDOMAIN);
 
     string_t err_id = "https://not.a.spiffe.id/wrong";
     err = spiffebundle_Endpoint_ConfigHTTPSSPIFFE(
         tested, "example.com/bundle.json", td, err_id, bundle_source);
-    ck_assert_int_eq(err, ERROR5);
+    ck_assert_int_eq(err, ERR_PARSING);
 
     err = spiffebundle_Endpoint_ConfigHTTPSSPIFFE(
         tested, "example.com/bundle.json", td, sid, NULL);
-    ck_assert_int_eq(err, ERROR6);
+    ck_assert_int_eq(err, ERR_INVALID_DATA);
 
     err = spiffebundle_Endpoint_ConfigHTTPSSPIFFE(
         tested, "example.com/bundle.json", td, sid, bundle_source);
@@ -89,22 +89,22 @@ START_TEST(test_federation_Endpoint_Config_WEB);
 
     err = spiffebundle_Endpoint_ConfigHTTPSWEB(NULL, "example.com/bundle.json",
                                                td);
-    ck_assert_int_eq(err, ERROR1);
+    ck_assert_int_eq(err, ERR_NULL);
 
     err = spiffebundle_Endpoint_ConfigHTTPSWEB(tested, NULL, td);
-    ck_assert_int_eq(err, ERROR2);
+    ck_assert_int_eq(err, ERR_EMPTY_DATA);
 
     err = spiffebundle_Endpoint_ConfigHTTPSWEB(tested, "not a URL", td);
-    ck_assert_int_eq(err, ERROR2);
+    ck_assert_int_eq(err, ERR_PARSING);
 
     spiffeid_TrustDomain err_td = { NULL };
     err = spiffebundle_Endpoint_ConfigHTTPSWEB(
         tested, "example.com/bundle.json", err_td);
-    ck_assert_int_eq(err, ERROR3);
+    ck_assert_int_eq(err, ERR_INVALID_TRUSTDOMAIN);
     spiffeid_TrustDomain err_td2 = { "not_a_td://NU,,LL" };
     err = spiffebundle_Endpoint_ConfigHTTPSWEB(
         tested, "example.com/bundle.json", err_td2);
-    ck_assert_int_eq(err, ERROR3);
+    ck_assert_int_eq(err, ERR_INVALID_TRUSTDOMAIN);
 
     err = spiffebundle_Endpoint_ConfigHTTPSWEB(tested,
                                                "example.com/bundle.json", td);
@@ -132,17 +132,17 @@ START_TEST(test_federation_Endpoint_get_bundle);
 
     spiffebundle_Bundle *end_bundle
         = spiffebundle_Endpoint_GetBundleForTrustDomain(NULL, td, &err);
-    ck_assert_uint_eq(err, ERROR1);
+    ck_assert_uint_eq(err, ERR_NULL);
 
     spiffeid_TrustDomain err_td = { NULL };
     end_bundle
         = spiffebundle_Endpoint_GetBundleForTrustDomain(tested, err_td, &err);
-    ck_assert_uint_eq(err, ERROR2);
+    ck_assert_uint_eq(err, ERR_TRUSTDOMAIN_NOTAVAILABLE);
 
     tested->source = NULL;
     end_bundle
         = spiffebundle_Endpoint_GetBundleForTrustDomain(tested, td, &err);
-    ck_assert_uint_eq(err, ERROR3);
+    ck_assert_uint_eq(err, ERR_NULL);
 
     tested->source = source;
     end_bundle
@@ -158,7 +158,7 @@ END_TEST
 
 START_TEST(test_federation_Endpoint_fetch_WEB);
 {
-    system("go run ./resources/https_spiffe_server.go &");
+    system("go run ./resources/https_web_server.go 127.0.0.1:443 &");
 
     struct timespec sleep_time = { .tv_sec = 1, .tv_nsec = 0 };
     nanosleep(&sleep_time,
@@ -179,6 +179,11 @@ START_TEST(test_federation_Endpoint_fetch_WEB);
     // set certs for localhost
     curl_easy_setopt(tested->curl_handle, CURLOPT_CAINFO,
                      "./resources/example.org.crt");
+    // set hostname resolution
+    struct curl_slist *resolve_list = NULL;
+    resolve_list
+        = curl_slist_append(resolve_list, "example.org:443:127.0.0.1");
+    curl_easy_setopt(tested->curl_handle, CURLOPT_RESOLVE, resolve_list);
 
     err = spiffebundle_Endpoint_Fetch(tested);
     nanosleep(&sleep_time, NULL);
@@ -196,18 +201,20 @@ START_TEST(test_federation_Endpoint_fetch_WEB);
         spiffebundle_Endpoint_GetBundleForTrustDomain(tested, td, &err)));
     ck_assert_uint_eq(err, NO_ERROR);
     spiffeid_TrustDomain_Free(&td);
+    curl_slist_free_all(resolve_list);
 }
 END_TEST
 
 START_TEST(test_federation_Endpoint_fetch_SPIFFE);
 {
-    system("go run ./resources/https_spiffe_server.go &");
+    system("go run ./resources/https_spiffe_server.go 127.0.0.1:443 &");
 
     struct timespec sleep_time = { .tv_sec = 1, .tv_nsec = 0 };
     nanosleep(&sleep_time,
               NULL); // sleep for half a second to let the server set itself up
     err_t err;
     spiffeid_TrustDomain td = { "example.org" };
+    spiffeid_TrustDomain null_td = { NULL };
     x509bundle_Bundle *x509bundle
         = x509bundle_Load(td, "./resources/example.org.crt", &err);
 
@@ -227,9 +234,23 @@ START_TEST(test_federation_Endpoint_fetch_SPIFFE);
     ck_assert_ptr_ne(tested->source, NULL);
     ck_assert_ptr_eq(tested->source, source);
     ck_assert_int_eq(err, NO_ERROR);
+    tested->curl_handle = curl_easy_init();
+
+    // set example.org -> 127.0.0.1
+    struct curl_slist *resolve_list = NULL;
+    resolve_list
+        = curl_slist_append(resolve_list, "example.org:443:127.0.0.1");
+    curl_easy_setopt(tested->curl_handle, CURLOPT_RESOLVE, resolve_list);
+    
+    err = spiffebundle_Endpoint_Fetch(NULL);
+    ck_assert_int_eq(err, ERR_NULL);
+    tested->td = null_td;
+    err = spiffebundle_Endpoint_Fetch(tested);
+    ck_assert_int_eq(err, ERR_INVALID_DATA);
+    tested->td = td;
 
     err = spiffebundle_Endpoint_Fetch(tested);
-
+    nanosleep(&sleep_time, NULL);
     ck_assert_int_eq(err, NO_ERROR);
     ck_assert_ptr_ne(tested->source, NULL);
     ck_assert(tested->owns_bundle);
@@ -261,6 +282,7 @@ START_TEST(test_federation_Endpoint_fetch_SPIFFE);
 
     ck_assert_uint_eq(err, NO_ERROR);
     spiffebundle_Endpoint_Free(tested);
+    curl_slist_free_all(resolve_list);
 }
 END_TEST
 
@@ -276,7 +298,7 @@ Suite *watcher_suite(void)
     tcase_add_test(tc_core, test_federation_Endpoint_fetch_WEB);
     tcase_add_test(tc_core, test_federation_Endpoint_fetch_SPIFFE);
 
-    tcase_set_timeout(tc_core,20);
+    tcase_set_timeout(tc_core, 20);
     suite_add_tcase(s, tc_core);
 
     return s;
